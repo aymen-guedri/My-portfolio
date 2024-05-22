@@ -1,16 +1,59 @@
+import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import headerImg from "./aymen.png";
+import 'animate.css';
+import styles from './Hero.module.css';
 
 const Hero = () => {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState('');
+  const toRotate = ["a Full stack Developer", "a Designer", "an Entrepreneur"];
+  const typingDelay = 100;
+  const deletingDelay = 50;
+  const pauseDelay = 1500;
+  const [imageVisible, setImageVisible] = useState(false);
+
+  useEffect(() => {
+    let ticker = setTimeout(() => {
+      tick();
+    }, isDeleting ? deletingDelay : typingDelay);
+
+    return () => { clearTimeout(ticker) };
+  }, [text, isDeleting]);
+
+  useEffect(() => {
+    setImageVisible(true);
+  }, []);
+
+  const tick = () => {
+    const i = loopNum % toRotate.length;
+    const fullText = toRotate[i];
+
+    if (isDeleting) {
+      setText((prevText) => prevText.slice(0, -1));
+    } else {
+      setText((prevText) => fullText.slice(0, prevText.length + 1));
+    }
+
+    if (!isDeleting && text === fullText) {
+      setTimeout(() => {
+        setIsDeleting(true);
+      }, pauseDelay);
+    } else if (isDeleting && text === '') {
+      setTimeout(() => {
+        setIsDeleting(false);
+        setLoopNum((prevLoopNum) => prevLoopNum + 1);
+      }, pauseDelay);
+    }
+  };
+
   return (
-    <div className="pb-20 pt-36">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
+    <div className="pb-20 pt-36 relative">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -23,42 +66,28 @@ const Hero = () => {
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
       <div
         className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
       >
-        {/* Radial gradient for the container to give a faded look */}
         <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
           className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
-          </p>
-
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
+      <div className="flex justify-between items-center relative my-20 z-10 max-w-6xl mx-auto px-4">
+        <div className="flex flex-col items-start justify-center flex-1 space-y-6">
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words="Hi, it's me 👋 Aymen Guedri"
+            className="text-left text-[13px] md:text-5xl lg:text-6xl"
           />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
-          </p>
+          <h1 className="text-left text-[13px] md:text-4xl lg:text-5xl">
+            {`and I'm`}{" "}
+            <span className="txt-rotate" data-rotate='[ "a Full stack Developer", "a Designer", "an Entrepreneur" ]'>
+              <span className="wrap" style={{color:"#00D3E1"}}>{text}</span>
+            </span>
+          </h1>
 
           <a href="#about">
             <MagicButton
@@ -67,6 +96,10 @@ const Hero = () => {
               position="right"
             />
           </a>
+        </div>
+
+        <div className={`flex-1  justify-end items-end ${imageVisible ? `animate__animated animate__zoomIn ${styles.imageFloat}` : ""}`}>
+          <Image src={headerImg} alt="Header Img" />
         </div>
       </div>
     </div>
