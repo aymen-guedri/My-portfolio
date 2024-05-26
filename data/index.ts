@@ -1,5 +1,4 @@
 export const navItems = [
-  {link: "#home", icon: "/aymen-logo.png"},
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
