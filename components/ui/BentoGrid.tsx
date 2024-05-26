@@ -100,17 +100,17 @@ export const BentoGridItem = ({
         </div>
         {id ===5  &&  (
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
+          className={`absolute right-0 -bottom-0 top-6 ${id === 5 && "w-full opacity-80"
             } `}
         >
-          <div className="font-sans font-extralight text-lg lg:text-4xl font-bold z-10">
-          <div className="flex flex-wrap justify-center mt-10">
+          
+          <div className="flex m-5 flex-wrap ">
             {rightLists.map((item, i) => (
-              <span key={i} className="inline-block py-1 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]  mr-3">
+              <span key={i} className="inline-block py-1 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] mb-6 mr-3">
                 {item}
               </span>
             ))}
-          </div>
+          
           </div>
           {spareImg && (
             <img
@@ -136,7 +136,7 @@ export const BentoGridItem = ({
           )}
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className="font-sans font-extralight  md:text-xs  text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight md:text-l  text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
@@ -164,21 +164,6 @@ export const BentoGridItem = ({
           {/* Tech stack list div */}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              {/* tech stack lists */}
-              {/* <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
-              </div>
-              */}
               
             </div>
           )}

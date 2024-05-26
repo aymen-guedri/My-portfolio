@@ -2,7 +2,7 @@ export const navItems = [
   {link: "#home", icon: "/aymen-logo.png"},
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -73,35 +73,35 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Smart dor",
+    des: "I built an IOT APP entitled ”smart door ” . arguably the most important part of a connected home that allows you to easily unlock and lock your door.",
+    img: "/dor.jpg",
+    iconLists: ["/re.svg"],
+    link: "https://youtu.be/9dhrrhRhbis?si=ouTxf0Yj7z5l5mG_",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "LynxReaders",
+    des: " LynxReaders is a platform that helps people to sell and buy used books for a better price",
+    img: "lynxReaders.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
+    link: "lynxreaders.com",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Smart System for the elderly",
+    des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay.",
+    img: "/system.jpg",
+    iconLists: ["/re.svg"],
+    link: "",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "Global game jam",
+    des: "Trainning for global game jam 2021",
+    img: "/game.png",
+    iconLists: ["unity.png"],
+    link: "https://youtu.be/AAruVtFAzpw?si=_iXt-9kxext7tMKr",
   },
 ];
 
@@ -174,29 +174,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Backend developer at Flouci by Kaoun",
+    desc: "Flouci is a financial superapp. Everything related to banking, secure and instant money exchanges, cashless payments on site and online, and even everyday services",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Full Stack Developer internship",
+    desc: "Developer for the FSB FabLab website at Bizerte Science Faculty, utilizing the MERN Stack (MongoDB, Express.js, React.js, Node.js) and integrating IoT technologies to facilitate seamless connectivity between the website and 3D printers.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Entrepreneur",
+    desc: "National student entrepreneur status - LynxCoder.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Mentor in MentorNations",
+    desc: " Mentor in ”MentorNations” for a camp entitled ” IOT 4 Youth Tech Camp 2018 ” By MentorNations and US embassy",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -207,12 +207,9 @@ export const socialMedia = [
     id: 1,
     img: "/git.svg",
   },
+  
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
   },
 ];
