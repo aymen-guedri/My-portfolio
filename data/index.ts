@@ -174,7 +174,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Backend developer at Flouci by Kaoun",
-    desc: "Flouci is a financial superapp. Everything related to banking, secure and instant money exchanges, cashless payments on site and online, and even everyday services",
+    desc: "Backend Developer at Flouci by Kaoun, specializing in Django REST API development for a financial superapp. Responsible for enabling secure money exchanges, cashless payments, and integrating diverse services into the platforms",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
