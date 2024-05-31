@@ -75,7 +75,7 @@ export const projects = [
     title: "Smart dor",
     des: "I built an IOT APP entitled ”smart door ” . arguably the most important part of a connected home that allows you to easily unlock and lock your door.",
     img: "/dor.jpg",
-    iconLists: ["/re.svg"],
+    iconLists: ["/re.svg","/arduino.png","/iot.png","/mqtt.png"],
     link: "https://youtu.be/9dhrrhRhbis?si=ouTxf0Yj7z5l5mG_",
   },
   {
@@ -83,15 +83,15 @@ export const projects = [
     title: "LynxReaders",
     des: " LynxReaders is a platform that helps people to sell and buy used books for a better price",
     img: "lynxreaders.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
-    link: "lynxreaders.com",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg","/mongo.png", "/node.png"],
+    link: "",
   },
   {
     id: 3,
     title: "Smart System for the elderly",
     des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay.",
     img: "/system.jpg",
-    iconLists: ["/re.svg"],
+    iconLists: ["/re.svg","/rasberry.png","/iot.png","/mqtt.png"],
     link: "",
   },
   {
@@ -101,6 +101,22 @@ export const projects = [
     img: "/game.png",
     iconLists: ["unity.png"],
     link: "https://youtu.be/AAruVtFAzpw?si=_iXt-9kxext7tMKr",
+  },
+  {
+    id: 5,
+    title: "Soliya connect program",
+    des: "how will life be after covid 19",
+    img: "/soliya2.jpg",
+    iconLists: ["/Youtube_logo.png"],
+    link: "https://youtu.be/QkPhYnKfMvg?si=B9ITWoot7N2lQ-8n",
+  },
+  {
+    id: 6,
+    title: "Soliya connect program",
+    des: "how will the world be prepared if another pandemic came into existence",
+    img: "/soliya2.png",
+    iconLists: ["/Youtube_logo.png"],
+    link: "https://youtu.be/Q-yK2sm8AH4?si=JLcLhdJbpO0RXKXz",
   },
 ];
 
