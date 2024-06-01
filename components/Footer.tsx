@@ -20,6 +20,7 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    console.log(e.target.name, e.target.value); 
   const { name, value } = e.target;
   setForm(prevForm => ({
     ...prevForm,
@@ -111,24 +112,22 @@ const Footer = () => {
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-
-            <MagicButton
-              title="Let's get in touch"
-              icon={<FaLocationArrow />}
-              position="right"
-              handleClick={handleSubmit}
-            />
-          </form>
+          <span className='text-white font-medium mb-4'>Your Message</span>
+          <textarea
+          rows={7}
+          name='message'
+          value={form.message}
+          onChange={handleChange}
+          placeholder='What you want to say?'
+        />
+        </label>
+        <MagicButton
+          title="Let's get in touch"
+          icon={<FaLocationArrow />}
+          position="right"
+          handleClick={(e) => handleSubmit(e as any)}
+        />
+        </form>
         </motion.div>
 
         <motion.div
