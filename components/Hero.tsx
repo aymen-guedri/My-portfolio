@@ -76,13 +76,13 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-between items-center relative my-20 z-10 max-w-6xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row justify-between items-center relative my-20 z-10 max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-start justify-center flex-1 space-y-6">
           <TextGenerateEffect
             words="Hi, it's me 👋 Aymen Guedri"
-            className="text-left text-[13px] md:text-5xl lg:text-6xl"
+            className="text-left text-lg md:text-5xl lg:text-6xl"
           />
-          <h1 className="text-left text-[13px] md:text-4xl lg:text-5xl">
+          <h1 className="text-left text-lg md:text-4xl lg:text-5xl">
             {`and I'm`}{" "}
             <span className="txt-rotate" data-rotate='[ "a Full stack Developer", "a Designer", "an Entrepreneur" ]'>
               <span className="wrap" style={{color:"#00D3E1"}}>{text}</span>
@@ -98,7 +98,7 @@ const Hero = () => {
           </a>
         </div>
 
-        <div className={`flex-1  justify-end items-end ${imageVisible ? `animate__animated animate__zoomIn ${styles.imageFloat}` : ""}`}>
+        <div className={`flex-1 flex justify-end items-center mt-10 md:mt-0 ${imageVisible ? `animate__animated animate__zoomIn ${styles.imageFloat}` : ""}`}>
           <Image src={headerImg} alt="Header Img" />
         </div>
       </div>
