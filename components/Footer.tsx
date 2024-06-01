@@ -19,8 +19,7 @@ const Footer = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    console.log(e.target.name, e.target.value); 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { 
   const { name, value } = e.target;
   setForm(prevForm => ({
     ...prevForm,
@@ -107,8 +106,8 @@ const Footer = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="What's your email address?"
+              className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
             />
           </label>
           <label className='flex flex-col'>
@@ -119,6 +118,7 @@ const Footer = () => {
           value={form.message}
           onChange={handleChange}
           placeholder='What you want to say?'
+          className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
         />
         </label>
         <MagicButton
