@@ -20,6 +20,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/aymenguedri.jpg" sizes="any" />
+        <meta property="og:title" content="Aymen Guedri V3" />
+        <meta property="og:description" content="Aymen Guedri portfolio" />
+        <meta property="og:image" content="https://aymen-guedri.me/aymen-logo.png" />
+        <meta property="og:url" content="https://aymen-guedri.me" />
+        <meta property="og:type" content="website" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
