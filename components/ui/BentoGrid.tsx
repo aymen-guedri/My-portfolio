@@ -46,7 +46,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const rightLists = [
-    "ReactJS", "HTML", "CSS", "JavaScript", "React Native", "Django", 
+    "ReactJS", "Nextjs", "CSS", "JavaScript", "React Native", "Django", 
     "Rest API", "NodeJs", "ExpressJs", "AWS", "Microsoft Azure", 
     "Docker", "SQL", "MongoDB", "FireBase", "Entrepreneurship", 
     "Unity", "3D Design"
@@ -149,7 +149,7 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 1 && (
-            <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-[#F5FFFF]`}>
+            <div className={` hidden font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-[#001D66]`}>
               {title}
             </div>
           )}
