@@ -107,7 +107,7 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 5 && (
-          <div className={`${isMobile ? "-top-4 bottom-0" : "absolute"} absolute right-0 -bottom-0 top-6 ${id === 5 && "w-full opacity-80"}`}>
+          <div className={`${isMobile ? "relative  -top-5 bottom-0" : "absolute"} absolute right-0 -bottom-0 top-6 ${id === 5 && "w-full opacity-80"}`}>
             <div className="flex m-5 flex-wrap">
               {rightLists.map((item, i) => (
                 <span key={i} className={`inline-block py-1 px-3 ${isMobile ? "text-xs mb-2" : "lg:text-base"} opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] mb-6 mr-3`}>
