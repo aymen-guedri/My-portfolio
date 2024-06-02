@@ -82,11 +82,15 @@ const Hero = () => {
             words="Hi, it's me 👋 Aymen Guedri"
             className="text-left text-lg md:text-5xl lg:text-6xl"
           />
-          <h1 className="text-left text-lg md:text-4xl lg:text-5xl">
-            {`and I'm`}{" "}
-            <span className="txt-rotate" data-rotate='[ "a Full stack Developer", "a Designer", "an Entrepreneur" ]'>
-              <span className="wrap" style={{color:"#00D3E1"}}>{text}</span>
-            </span>
+          <h1 className="text-left text-lg md:text-5xl lg:text-4xl">
+            <TextGenerateEffect
+            words="and I'm"
+            className="text-left text-lg md:text-4xl lg:text-4xl"
+            />
+            <TextGenerateEffect
+            words="a Full stack developer"
+            className="text-left text-lg md:text-4xl lg:text-4xl"
+            />
           </h1>
 
           <a href="#about">
