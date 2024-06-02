@@ -88,7 +88,7 @@ const Hero = () => {
             className="text-left text-lg md:text-4xl lg:text-4xl"
             />
             <TextGenerateEffect
-            words="a Full stack developer"
+            words="a software engineer"
             className="text-left text-lg md:text-4xl lg:text-4xl"
             />
           </h1>
