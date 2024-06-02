@@ -7,6 +7,7 @@ export default withSentryConfig(nextConfig, {
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
     // Suppresses source map uploading logs during build
+    tunnelRoute: "/api/sentry-tunnel",
     silent: true,
     org: "Aymen-Guedri",
 }, {
