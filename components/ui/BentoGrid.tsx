@@ -101,8 +101,8 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-fill object-full")}
-              style={{ transform: "scale(1)" }}
+              className={cn(imgClassName, "object-fill object-contain  ")}
+              style={{ transform: "scale(1.1)" }}
             />
           )}
         </div>
