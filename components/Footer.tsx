@@ -20,15 +20,22 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { 
-  const { name, value } = e.target;
-  setForm(prevForm => ({
-    ...prevForm,
-    [name]: value
-  }));
-};
+    const { name, value } = e.target;
+    setForm(prevForm => ({
+      ...prevForm,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!form.name || !form.email || !form.message) {
+      alert("Please fill out all fields.");
+      setLoading(false);
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -96,38 +103,43 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="What's your good name?"
                 className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
+                required
               />
             </label>
             
-             <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email address?"
-              className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
+            <label className='flex flex-col'>
+              <span className='text-white font-medium mb-4'>Your email</span>
+              <input
+                type='email'
+                name='email'
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your email address?"
+                className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
+                required
+              />
+            </label>
+            
+            <label className='flex flex-col'>
+              <span className='text-white font-medium mb-4'>Your Message</span>
+              <textarea
+                rows={7}
+                name='message'
+                value={form.message}
+                onChange={handleChange}
+                placeholder='What you want to say?'
+                className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
+                required
+              />
+            </label>
+            
+            <MagicButton
+              title="Let's get in touch"
+              icon={<FaLocationArrow />}
+              position="right"
+              handleClick={() => formRef.current?.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }))}
             />
-          </label>
-          <label className='flex flex-col'>
-          <span className='text-white font-medium mb-4'>Your Message</span>
-          <textarea
-          rows={7}
-          name='message'
-          value={form.message}
-          onChange={handleChange}
-          placeholder='What you want to say?'
-          className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
-        />
-        </label>
-        <MagicButton
-          title="Let's get in touch"
-          icon={<FaLocationArrow />}
-          position="right"
-          handleClick={(e) => handleSubmit(e as any)}
-        />
-        </form>
+          </form>
         </motion.div>
 
         <motion.div
