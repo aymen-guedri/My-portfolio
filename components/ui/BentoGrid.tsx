@@ -46,10 +46,24 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const rightLists = [
-    "ReactJS", "Nextjs", "CSS", "JavaScript", "React Native", "Django", 
-    "Rest API", "NodeJs", "ExpressJs", "AWS", "Microsoft Azure", 
-    "Docker", "SQL", "MongoDB", "FireBase", "Entrepreneurship", 
-    "Unity", "3D Design"
+    "ReactJS",
+    "Nextjs",
+    "CSS",
+    "JavaScript",
+    "React Native",
+    "Django",
+    "Rest API",
+    "NodeJs",
+    "ExpressJs",
+    "AWS",
+    "Microsoft Azure",
+    "Docker",
+    "SQL",
+    "MongoDB",
+    "FireBase",
+    "Entrepreneurship",
+    "Unity",
+    "3D Design",
   ];
 
   const [copied, setCopied] = useState(false);
@@ -97,20 +111,34 @@ export const BentoGridItem = ({
     >
       <div className={`${id === 6 && "flex justify-start"} h-full`}>
         <div className="w-full h-full absolute">
-          {(img && !(id === 5 && isMobile)) && (
+          {img && !(id === 5 && isMobile) && (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-fill object-contain  ")}
-              style={{ transform: "scale(1.1)" }}
+              className={cn(
+                imgClassName,
+                id === 1 ? "object-contain" : "object-cover"
+              )}
+              style={{ transform: "scale(1.7)" }}
             />
           )}
         </div>
         {id === 5 && (
-          <div className={`${isMobile ? "relative  -top-5 bottom-0" : "absolute"} absolute right-0 -bottom-0 top-6 ${id === 5 && "w-full opacity-80"}`}>
+          <div
+            className={`${
+              isMobile ? "relative  -top-5 bottom-0" : "absolute"
+            } absolute right-0 -bottom-0 top-6 ${
+              id === 5 && "w-full opacity-80"
+            }`}
+          >
             <div className="flex m-5 flex-wrap">
               {rightLists.map((item, i) => (
-                <span key={i} className={`inline-block py-1 px-3 ${isMobile ? "text-xs mb-2" : "lg:text-base"} opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] mb-6 mr-3`}>
+                <span
+                  key={i}
+                  className={`inline-block py-1 px-3 ${
+                    isMobile ? "text-xs mb-2" : "lg:text-base"
+                  } opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] mb-6 mr-3`}
+                >
                   {item}
                 </span>
               ))}
@@ -138,26 +166,40 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:text-l text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          {id === 5 &&(
-            <div className={`${isMobile ? "hidden " : ""}font-sans font-extralight text-lg lg:text-3xl max-w-96 font-bold z-10`}>
+          {id === 5 && (
+            <div
+              className={`${
+                isMobile ? "hidden " : ""
+              }font-sans font-extralight text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            >
               {title}
             </div>
           )}
-          {id !== 1 && id !==5 && (
-            <div className={`font-sans font-extralight text-lg lg:text-3xl max-w-96 font-bold z-10`}>
+          {id !== 1 && id !== 5 && (
+            <div
+              className={`font-sans font-extralight text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            >
               {title}
             </div>
           )}
           {id === 1 && (
-            <div className={` hidden font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-[#001D66]`}>
+            <div
+              className={` hidden font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-[#001D66]`}
+            >
               {title}
             </div>
           )}
           {id === 2 && <GridGlobe />}
-          {id === 3 && <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2"></div>}
+          {id === 3 && (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2"></div>
+          )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"}`}>
+              <div
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
+              >
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
               <MagicButton
