@@ -24,7 +24,7 @@ import {
   SiMqtt,
 } from "react-icons/si";
 
-const skillIcons = {
+const skillIcons: { [key: string]: JSX.Element } = {
   django: <SiDjango />,
   restapi: <FaDatabase />,
   financial: <FaBusinessTime />,
@@ -91,7 +91,7 @@ const Experience = () => {
                       key={index}
                       className="text-xl p-2 bg-gray-200 dark:bg-gray-700 rounded-full"
                     >
-                      {skillIcons[skill]}
+                      {skillIcons[skill as keyof typeof skillIcons]}
                     </span>
                   ))}
                 </div>
