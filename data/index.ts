@@ -198,31 +198,54 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Backend developer at Flouci by Kaoun",
-    desc: "Backend Developer at Flouci by Kaoun, specializing in Django REST API development for a financial superapp. Responsible for enabling secure money exchanges, cashless payments, and integrating diverse services into the platforms",
+    title: "Full stack developer (Freelance)",
+    duration: "Jul 2024 - Present",
+    desc: [
+      "Developed and maintained full-stack web applications for various clients, ensuring high-quality software solutions that met business needs",
+      "Built dynamic user interfaces with responsive designs for an intuitive user experience across platforms",
+      "Designed and implemented RESTful APIs to facilitate seamless communication between front-end and back-end systems",
+    ],
+    skills: ["reactjs", "nodejs", "mongodb", "expressjs", "nextjs"],
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/eskills-a.png",
   },
   {
     id: 2,
-    title: "Full Stack Developer internship",
-    desc: "Developer for the FSB FabLab website at Bizerte Science Faculty, utilizing the MERN Stack (MongoDB, Express.js, React.js, Node.js) and integrating IoT technologies to facilitate seamless connectivity between the website and 3D printers.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    title: "Backend developer at Flouci by Kaoun",
+    duration: "Sep 2023 - Jun 2024",
+    desc: [
+      "Led the development of a backend system for a financial superapp, enhancing functionality for over 250,000 users and facilitating secure money transfers and cashless payments.",
+      "Improved system performance and scalability by implementing a robust Django Rest API, ensuring reliable service integration and smooth operations.",
+      "Worked closely with the front-end team to deliver a cohesive and seamless user experience",
+    ],
+    skills: ["django", "restapi", "uml", "html", "css", "javascript"],
+    className: "md:col-span-2",
+    thumbnail: "/flouci.png",
   },
   {
     id: 3,
-    title: "Entrepreneur",
-    desc: "National student entrepreneur status - LynxCoder.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    title: "Full Stack Developer internship",
+    duration: "Jan 2023 - Jun 2023",
+    desc: [
+      "Created the FabLab FSB website, improving digital presence and user engagement.",
+      "Connected IoT technologies to 3D printers on the platform, enabling real-time monitoring and streamlining operations.",
+      "Supported FabLab FSB's mission to enhance employability and entrepreneurship for approximately 3,400 students through digital fabrication tools",
+    ],
+    skills: ["reactjs", "nodejs", "mongodb", "expressjs", "iot", "mqtt"],
+    className: "md:col-span-2",
+    thumbnail: "/fablab.png",
   },
   {
     id: 4,
-    title: "Mentor in MentorNations",
-    desc: " Mentor in ”MentorNations” for a camp entitled ” IOT 4 Youth Tech Camp 2018 ” By MentorNations and US embassy",
+    title: "Frontend Developer (Part time)",
+    duration: "May 2021 - Jan 2023",
+    desc: [
+      "Created responsive web applications, significantly enhancing user experience across various devices.",
+      "Developed cross-platform mobile apps, consistently ensuring smooth performance for over 100 clients",
+    ],
+    skills: ["reactjs", "nextjs", "figma"],
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/eskills-a.png",
   },
 ];
 

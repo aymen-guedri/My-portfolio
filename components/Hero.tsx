@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import headerImg from "./aymen.png";
-import 'animate.css';
-import styles from './Hero.module.css';
+import "animate.css";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const toRotate = ["a Full stack Developer", "a Designer", "an Entrepreneur"];
   const typingDelay = 100;
   const deletingDelay = 50;
@@ -19,11 +19,16 @@ const Hero = () => {
   const [imageVisible, setImageVisible] = useState(false);
 
   useEffect(() => {
-    let ticker = setTimeout(() => {
-      tick();
-    }, isDeleting ? deletingDelay : typingDelay);
+    let ticker = setTimeout(
+      () => {
+        tick();
+      },
+      isDeleting ? deletingDelay : typingDelay
+    );
 
-    return () => { clearTimeout(ticker) };
+    return () => {
+      clearTimeout(ticker);
+    };
   }, [text, isDeleting]);
 
   useEffect(() => {
@@ -44,7 +49,7 @@ const Hero = () => {
       setTimeout(() => {
         setIsDeleting(true);
       }, pauseDelay);
-    } else if (isDeleting && text === '') {
+    } else if (isDeleting && text === "") {
       setTimeout(() => {
         setIsDeleting(false);
         setLoopNum((prevLoopNum) => prevLoopNum + 1);
@@ -84,25 +89,34 @@ const Hero = () => {
           />
           <h1 className="text-left text-lg md:text-5xl lg:text-4xl">
             <TextGenerateEffect
-            words="and I'm"
-            className="text-left text-lg md:text-4xl lg:text-4xl"
+              words="and I'm"
+              className="text-left text-lg md:text-4xl lg:text-4xl"
             />
             <TextGenerateEffect
-            words="a software engineer"
-            className="text-left text-lg md:text-4xl lg:text-4xl"
+              words="a software engineer"
+              className="text-left text-lg md:text-4xl lg:text-4xl"
             />
           </h1>
 
-          <a href="#about">
+          <a
+            href="https://drive.google.com/file/d/1ace6NJhqLBskqHNyWyguG99QxGACDv7S/view?usp=sharing"
+            target="_blank"
+          >
             <MagicButton
-              title="Show my work"
+              title="Show my resume"
               icon={<FaLocationArrow />}
               position="right"
             />
           </a>
         </div>
 
-        <div className={`flex-1 flex justify-end items-center mt-10 md:mt-0 ${imageVisible ? `animate__animated animate__zoomIn ${styles.imageFloat}` : ""}`}>
+        <div
+          className={`flex-1 flex justify-end items-center mt-10 md:mt-0 ${
+            imageVisible
+              ? `animate__animated animate__zoomIn ${styles.imageFloat}`
+              : ""
+          }`}
+        >
           <Image src={headerImg} alt="Header Img" />
         </div>
       </div>
