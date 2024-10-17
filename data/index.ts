@@ -198,7 +198,7 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Full stack developer (Freelance)",
+    title: "Full stack developer (Freelance) at Eskills-agency",
     duration: "Jul 2024 - Present",
     desc: [
       "Developed and maintained full-stack web applications for various clients, ensuring high-quality software solutions that met business needs",
@@ -224,7 +224,7 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Full Stack Developer internship",
+    title: "Full Stack Developer internship at FSB FabLab",
     duration: "Jan 2023 - Jun 2023",
     desc: [
       "Created the FabLab FSB website, improving digital presence and user engagement.",
@@ -237,7 +237,7 @@ export const workExperience = [
   },
   {
     id: 4,
-    title: "Frontend Developer (Part time)",
+    title: "Frontend Developer (Part time) at Eskills-agency",
     duration: "May 2021 - Jan 2023",
     desc: [
       "Created responsive web applications, significantly enhancing user experience across various devices.",
@@ -246,6 +246,64 @@ export const workExperience = [
     skills: ["reactjs", "nextjs", "figma"],
     className: "md:col-span-2",
     thumbnail: "/eskills-a.png",
+  },
+];
+
+export const volunteeringExperience = [
+  {
+    id: 1,
+    title: "Founder of LynxCoder Club",
+    duration: "Sep 2022 - Present",
+    desc: [
+      "Founded LynxCoder, creating an innovative educational platform that boosted student engagement through interactive learning experiences.",
+      "Launched it as a university club, fostering a strong tech community. ",
+      "Achieved top 10 recognition in the Carthage Innov'Startup Challenge.",
+    ],
+    skills: [
+      "Educational platforms",
+      "Community building",
+      "Student engagement",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/lynx.jpg",
+  },
+  {
+    id: 2,
+    title: "Frontend Developer Mentor",
+    duration: "May 2024 - Aug 2024",
+    desc: [
+      "Mentored participants, enhancing their approach to building scalable web applications. ",
+      "Assisted in streamlining integration and deployment workflows. ",
+      "Evaluated projects as a jury member, offering key insights on technical execution and problem-solving.",
+    ],
+    skills: ["reactjs", "FireBase", "DevOps"],
+    className: "md:col-span-2",
+    thumbnail: "/mentornations.png",
+  },
+  {
+    id: 3,
+    title: "IQ challenge Ambassador",
+    duration: "Sep 2018 - Mar 2019",
+    desc: [
+      "Promoting and representing the IQ Challenge in Jendouba, ensuring widespread participation among local high school students",
+      "Supporting participants by providing guidance and motivation throughout the competition stages",
+    ],
+    skills: ["IQ", "Ambassador"],
+    className: "md:col-span-2",
+    thumbnail: "/tek-up.png",
+  },
+  {
+    id: 4,
+    title: "IoT Developer Mentor",
+    duration: "Jul 2018 - Aug 2018",
+    desc: [
+      "Mentored participants at the 'IoT 4 YouthTech Camp 2018,' a program by the U.S. Embassy and MentorNations. ",
+      "Provided guidance on building Android apps and integrating IoT solutions. ",
+      "Helped participants successfully implement projects using Arduino Uno.",
+    ],
+    skills: ["Arduino"],
+    className: "md:col-span-2",
+    thumbnail: "/mentornations.png",
   },
 ];
 
