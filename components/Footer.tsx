@@ -18,20 +18,40 @@ const Footer = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<{
+    text: string;
+    type: "success" | "error";
+  } | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setForm(prevForm => ({
+    setForm((prevForm) => ({
       ...prevForm,
-      [name]: value
+      [name]: value,
     }));
+  };
+
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!form.name || !form.email || !form.message) {
-      alert("Please fill out all fields.");
+      setMessage({ text: "Please fill out all fields.", type: "error" });
+      setLoading(false);
+      return;
+    }
+
+    if (!validateEmail(form.email)) {
+      setMessage({
+        text: "Please enter a valid email address.",
+        type: "error",
+      });
       setLoading(false);
       return;
     }
@@ -52,7 +72,10 @@ const Footer = () => {
         "JhHD_fnBE7sejB7Zm"
       );
       setLoading(false);
-      alert("Thank you. I will get back to you as soon as possible.");
+      setMessage({
+        text: "Thank you. I will get back to you as soon as possible.",
+        type: "success",
+      });
 
       setForm({
         name: "",
@@ -62,7 +85,10 @@ const Footer = () => {
     } catch (error) {
       setLoading(false);
       console.error(error);
-      alert("Ahh, something went wrong. Please try again.");
+      setMessage({
+        text: "Ahh, something went wrong. Please try again.",
+        type: "error",
+      });
     }
   };
 
@@ -78,10 +104,12 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital presence to the next level?
+          Ready to take <span className="text-purple">your</span> digital
+          presence to the next level?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
+          Reach out to me today and let&apos;s discuss how I can help you
+          achieve your goals.
         </p>
       </div>
       <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
@@ -106,12 +134,12 @@ const Footer = () => {
                 required
               />
             </label>
-            
-            <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your email</span>
+
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your email</span>
               <input
-                type='email'
-                name='email'
+                type="email"
+                name="email"
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email address?"
@@ -119,27 +147,40 @@ const Footer = () => {
                 required
               />
             </label>
-            
-            <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Message</span>
+
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Message</span>
               <textarea
                 rows={7}
-                name='message'
+                name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder='What you want to say?'
+                placeholder="What you want to say?"
                 className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
                 required
               />
             </label>
-            
+
             <MagicButton
               title="Let's get in touch"
               icon={<FaLocationArrow />}
               position="right"
-              handleClick={() => formRef.current?.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }))}
+              handleClick={() =>
+                formRef.current?.dispatchEvent(
+                  new Event("submit", { cancelable: true, bubbles: true })
+                )
+              }
             />
           </form>
+          {message && (
+            <div
+              className={`mt-4 p-4 rounded-lg ${
+                message.type === "success" ? "bg-green-500" : "bg-red-500"
+              } text-white`}
+            >
+              {message.text}
+            </div>
+          )}
         </motion.div>
 
         <motion.div
