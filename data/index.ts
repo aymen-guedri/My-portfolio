@@ -31,7 +31,7 @@ export const gridItems = [
     id: 3,
     title: "",
     description:
-      "My name is Aymen Guedri, a 24-year-old software engineering student at TEK-UP University. Passionate about both software development and entrepreneurship, I possess a solid understanding of the software development life cycle. A quick learner and dedicated team player, I'm always on the lookout for new challenges and opportunities for growth. As an aspiring entrepreneur, I'm driven to innovate and create impactful solutions.",
+      "Aymen Guedri, a software engineering student at TEK-UP University with a passion for software development and entrepreneurship. I have a comprehensive understanding of the software development life cycle and am a quick learner and dedicated team player. I am always seeking new challenges and opportunities for growth and am driven to innovate and create impactful solutions.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -74,7 +74,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Smart dor",
+    title: "Smart door",
     des: "I built an IOT APP entitled ”smart door ” . arguably the most important part of a connected home that allows you to easily unlock and lock your door.",
     img: "/dor.jpg",
     iconLists: ["/re.svg", "/arduino.png", "/iot.png", "/mqtt.png"],
