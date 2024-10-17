@@ -108,7 +108,7 @@ export const projects = [
     title: "Global game jam",
     des: "Trainning for global game jam 2021",
     img: "/game.png",
-    iconLists: ["unity.png"],
+    iconLists: ["/unity.jpg"],
     link: "https://youtu.be/AAruVtFAzpw?si=_iXt-9kxext7tMKr",
   },
   {
@@ -286,7 +286,7 @@ export const volunteeringExperience = [
     duration: "Sep 2018 - Mar 2019",
     desc: [
       "Promoting and representing the IQ Challenge in Jendouba, ensuring widespread participation among local high school students",
-      "Supporting participants by providing guidance and motivation throughout the competition stages",
+      "Supporting participants by providing guidance and motivation throughout the competition stages.",
     ],
     skills: ["IQ", "Ambassador"],
     className: "md:col-span-2",

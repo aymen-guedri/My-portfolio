@@ -5,6 +5,36 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import RecentProjectsMobile from "./RecentProjectsMobile";
+import {
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaMicrochip,
+  FaYoutube,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiThreedotjs,
+  SiMongodb,
+  SiArduino,
+  SiRaspberrypi,
+  SiMqtt,
+} from "react-icons/si";
+
+const techIcons: { [key: string]: JSX.Element } = {
+  "/re.svg": <FaReact />,
+  "/tail.svg": <SiTailwindcss />,
+  "/ts.svg": <SiTypescript />,
+  "/three.svg": <SiThreedotjs />,
+  "/mongo.png": <SiMongodb />,
+  "/node.png": <FaNodeJs />,
+  "/arduino.png": <SiArduino />,
+  "/iot.png": <FaMicrochip />,
+  "/mqtt.png": <SiMqtt />,
+  "/rasberry.png": <SiRaspberrypi />,
+  "/Youtube_logo.png": <FaYoutube />,
+};
 
 const RecentProjects = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +70,11 @@ const RecentProjects = () => {
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" className="absolute inset-0 w-full h-full object-cover" />
+                  <img
+                    src="/bg.png"
+                    alt="bgimg"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
                 <img
                   src={item.img}
@@ -58,16 +92,17 @@ const RecentProjects = () => {
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
+                <div className="flex items-center space-x-2">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
                     >
-                      <img src={icon} alt={`icon${index}`} className="p-2" />
+                      {icon === "/unity.jpg" ? (
+                        <img src={icon} alt={`icon${index}`} className="p-2" />
+                      ) : (
+                        techIcons[icon as keyof typeof techIcons]
+                      )}
                     </div>
                   ))}
                 </div>
