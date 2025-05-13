@@ -198,14 +198,13 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Full stack developer (Freelance) at Eskills-agency",
+    title: "Software Engineer at Eskills-agency",
     duration: "Jul 2024 - Present",
     desc: [
-      "Developed and maintained full-stack web applications for various clients, ensuring high-quality software solutions that met business needs",
-      "Built dynamic user interfaces with responsive designs for an intuitive user experience across platforms",
-      "Designed and implemented RESTful APIs to facilitate seamless communication between front-end and back-end systems",
+      "Developed a comprehensive delivery platform for a client using the MERN stack, creating dynamic and responsive user interfaces for a seamless cross-platform experience",
+      "Currently working on a remote project with a German client to develop a health application focused on pharmacy services, utilizing React.js for frontend development and implementing the backend based on PHP and SQL for database management.",
     ],
-    skills: ["reactjs", "nodejs", "mongodb", "expressjs", "nextjs"],
+    skills: ["reactjs", "nodejs", "mongodb", "expressjs", "nextjs", "php", "sql"],
     className: "md:col-span-2",
     thumbnail: "/eskills-a.png",
   },
