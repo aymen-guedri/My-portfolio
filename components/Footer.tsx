@@ -60,7 +60,7 @@ const Footer = () => {
 
     try {
       await emailjs.send(
-        "aymen-guedri2024",
+        "service_cjltpvm",
         "template_8iwe221",
         {
           from_name: form.name,
