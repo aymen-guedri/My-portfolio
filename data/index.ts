@@ -84,7 +84,7 @@ export const projects = [
     id: 2,
     title: "LynxReaders",
     des: " LynxReaders is a platform that helps people to sell and buy used books for a better price",
-    img: "lynxreaders.jpg",
+    img: "lynxreaders.png",
     iconLists: [
       "/re.svg",
       "/tail.svg",
