@@ -93,7 +93,7 @@ export const projects = [
       "/mongo.png",
       "/node.png",
     ],
-    link: "",
+    link: "https://lynxreaders.com/",
   },
   {
     id: 3,
