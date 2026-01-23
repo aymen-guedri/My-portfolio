@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
-import { workExperience } from "@/data";
-import { volunteeringExperience } from "@/data";
+import { workExperience, volunteeringExperience } from "@/data";
+import { getTranslatedData } from "@/data/translatedData";
 import { Button } from "./ui/MovingBorders";
+import { useTranslation } from "react-i18next";
 import {
   FaPython,
   FaNodeJs,
@@ -57,14 +60,27 @@ const skillIcons: { [key: string]: JSX.Element } = {
 };
 
 const Experience = () => {
+  const { t, i18n } = useTranslation();
+  const translatedData = getTranslatedData(i18n.language);
+  
+  const mergedWorkExperience = workExperience.map((exp, index: number) => ({
+    ...exp,
+    ...translatedData.workExperience[index]
+  }));
+  
+  const mergedVolunteeringExperience = volunteeringExperience.map((exp, index: number) => ({
+    ...exp,
+    ...translatedData.volunteeringExperience[index]
+  }));
+  
   return (
-    <div className="py-20 w-full" id="experience">
+    <div className="py-20 w-full" id="experience" key={i18n.language}>
       <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+        {t('experience.work')}
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
+        {mergedWorkExperience.map((card) => (
           <Button
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
@@ -88,12 +104,12 @@ const Experience = () => {
                   {card.duration}
                 </p>
                 <ul className="text-start text-white-100 mt-3 font-semibold list-disc list-inside">
-                  {card.desc.map((point, index) => (
+                  {card.desc.map((point: string, index: number) => (
                     <li key={index}>{point}</li>
                   ))}
                 </ul>
                 <div className="flex mt-3 space-x-2 flex-wrap">
-                  {card.skills.map((skill, index) => (
+                  {card.skills.map((skill: string, index: number) => (
                     <span
                       key={index}
                       className="text-xl p-2 bg-gray-200 dark:bg-gray-700 rounded-full"
@@ -109,10 +125,10 @@ const Experience = () => {
       </div>
 
       <h1 className="heading mt-20">
-        My <span className="text-purple">Volunteering experience</span>
+        {t('experience.volunteering')}
       </h1>
       <div className="w-full mt-12 flex flex-col items-center gap-10">
-        {volunteeringExperience.map((card) => (
+        {mergedVolunteeringExperience.map((card) => (
           <Button
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
@@ -136,12 +152,12 @@ const Experience = () => {
                   {card.duration}
                 </p>
                 <ul className="text-start text-white-100 mt-3 font-semibold list-disc list-inside">
-                  {card.desc.map((point, index) => (
+                  {card.desc.map((point: string, index: number) => (
                     <li key={index}>{point}</li>
                   ))}
                 </ul>
                 <div className="flex mt-3 space-x-2 flex-wrap">
-                  {card.skills.map((skill, index) => (
+                  {card.skills.map((skill: string, index: number) => (
                     <span
                       key={index}
                       className="text-xl p-2 bg-gray-200 dark:bg-gray-700 rounded-full"

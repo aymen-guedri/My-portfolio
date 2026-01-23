@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
+import { getTranslatedData } from "@/data/translatedData";
 import { PinContainer } from "./ui/Pin";
 import RecentProjectsMobile from "./RecentProjectsMobile";
+import { useTranslation } from "react-i18next";
 import {
   FaReact,
   FaNodeJs,
@@ -37,7 +39,14 @@ const techIcons: { [key: string]: JSX.Element } = {
 };
 
 const RecentProjects = () => {
+  const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
+  const translatedData = getTranslatedData(i18n.language);
+  
+  const mergedProjects = projects.map((proj, index) => ({
+    ...proj,
+    ...translatedData.projects[index]
+  }));
 
   useEffect(() => {
     const handleResize = () => {
@@ -53,13 +62,13 @@ const RecentProjects = () => {
   return isMobile ? (
     <RecentProjectsMobile />
   ) : (
-    <div className="py-20" id="projects">
+    <div className="py-20" id="projects" key={i18n.language}>
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        {t('projects.title')}{" "}
+        <span className="text-purple">{t('projects.recent')}</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 w-full py-20 mt-10">
-        {projects.map((item) => (
+        {mergedProjects.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex flex-col justify-between"
             key={item.id}
@@ -115,7 +124,7 @@ const RecentProjects = () => {
                     className="flex justify-center items-center"
                   >
                     <p className="sm:text-sm md:text-sm text-xs font-light text-purple">
-                      Check details
+                      {t('projects.checkDetails')}
                     </p>
                     <FaLocationArrow className="ms-3" color="#CBACF9" />
                   </a>

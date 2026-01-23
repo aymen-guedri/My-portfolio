@@ -25,6 +25,17 @@ export default function RootLayout({
         <meta property="og:image" content="https://aymen-guedri.me/aymen-logo.png" />
         <meta property="og:url" content="https://aymen-guedri.me" />
         <meta property="og:type" content="website" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            if (typeof window !== 'undefined') {
+              const originalError = console.error;
+              console.error = (...args) => {
+                if (args[0]?.includes?.('THREE.BufferGeometry.computeBoundingSphere')) return;
+                originalError.apply(console, args);
+              };
+            }
+          `
+        }} />
       </head>
       <body className={inter.className}>
         <ThemeProvider

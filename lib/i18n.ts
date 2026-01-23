@@ -1,0 +1,166 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      "nav.home": "Home",
+      "nav.about": "About",
+      "nav.experience": "Experience",
+      "nav.projects": "Projects",
+      "nav.contact": "Contact",
+      "hero.greeting": "Hi, it's me 👋 Aymen Guedri",
+      "hero.and": "and I'm",
+      "hero.role": "a software engineer",
+      "hero.resume": "Show my resume",
+      "about.title": "About me",
+      "about.name": "Aymen Guedri",
+      "about.description": "Aymen Guedri, a software engineering student at TEK-UP University with a passion for software development and entrepreneurship. I have a comprehensive understanding of the software development life cycle and am a quick learner and dedicated team player. I am always seeking new challenges and opportunities for growth and am driven to innovate and create impactful solutions.",
+      "about.techEnthusiast": "Tech enthusiast with a passion for development.",
+      "about.techCore": "My Tech core",
+      "about.startProject": "Do you want to start a project together?",
+      "about.copyEmail": "Copy my email address",
+      "about.emailCopied": "Email is Copied!",
+      "experience.work": "My work experience",
+      "experience.volunteering": "My Volunteering experience",
+      "projects.title": "A small selection of",
+      "projects.recent": "recent projects",
+      "projects.checkDetails": "Check details",
+      "contact.title": "Ready to take your digital presence to the next level?",
+      "contact.subtitle": "Reach out to me today and let's discuss how I can help you achieve your goals.",
+      "contact.name": "Your Name",
+      "contact.namePlaceholder": "What's your good name?",
+      "contact.email": "Your email",
+      "contact.emailPlaceholder": "What's your email address?",
+      "contact.message": "Your Message",
+      "contact.messagePlaceholder": "What you want to say?",
+      "contact.submit": "Let's get in touch",
+      "footer.copyright": "©2026 Aymen Guedri",
+      "footer.madeWith": "Made with love ❤️ and magic ✨"
+    }
+  },
+  fr: {
+    translation: {
+      "nav.home": "Accueil",
+      "nav.about": "À propos",
+      "nav.experience": "Expérience",
+      "nav.projects": "Projets",
+      "nav.contact": "Contact",
+      "hero.greeting": "Salut, c'est moi 👋 Aymen Guedri",
+      "hero.and": "et je suis",
+      "hero.role": "un ingénieur logiciel",
+      "hero.resume": "Voir mon CV",
+      "about.title": "À propos de moi",
+      "about.name": "Aymen Guedri",
+      "about.description": "Aymen Guedri, étudiant en génie logiciel à l'Université TEK-UP avec une passion pour le développement logiciel et l'entrepreneuriat. J'ai une compréhension complète du cycle de vie du développement logiciel et je suis un apprenant rapide et un joueur d'équipe dévoué. Je recherche toujours de nouveaux défis et opportunités de croissance et je suis motivé à innover et à créer des solutions percutantes.",
+      "about.techEnthusiast": "Passionné de technologie avec une passion pour le développement.",
+      "about.techCore": "Mon cœur technologique",
+      "about.startProject": "Voulez-vous démarrer un projet ensemble?",
+      "about.copyEmail": "Copier mon adresse e-mail",
+      "about.emailCopied": "E-mail copié!",
+      "experience.work": "Mon expérience professionnelle",
+      "experience.volunteering": "Mon expérience de bénévolat",
+      "projects.title": "Une petite sélection de",
+      "projects.recent": "projets récents",
+      "projects.checkDetails": "Voir les détails",
+      "contact.title": "Prêt à faire passer votre présence numérique au niveau supérieur?",
+      "contact.subtitle": "Contactez-moi aujourd'hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
+      "contact.name": "Votre nom",
+      "contact.namePlaceholder": "Quel est votre nom?",
+      "contact.email": "Votre email",
+      "contact.emailPlaceholder": "Quelle est votre adresse email?",
+      "contact.message": "Votre message",
+      "contact.messagePlaceholder": "Que voulez-vous dire?",
+      "contact.submit": "Entrons en contact",
+      "footer.copyright": "©2026 Aymen Guedri",
+      "footer.madeWith": "Fait avec amour ❤️ et magie ✨"
+    }
+  },
+  de: {
+    translation: {
+      "nav.home": "Startseite",
+      "nav.about": "Über mich",
+      "nav.experience": "Erfahrung",
+      "nav.projects": "Projekte",
+      "nav.contact": "Kontakt",
+      "hero.greeting": "Hallo, ich bin 👋 Aymen Guedri",
+      "hero.and": "und ich bin",
+      "hero.role": "ein Software-Ingenieur",
+      "hero.resume": "Meinen Lebenslauf anzeigen",
+      "about.title": "Über mich",
+      "about.name": "Aymen Guedri",
+      "about.description": "Aymen Guedri, ein Softwareentwicklungsstudent an der TEK-UP-Universität mit einer Leidenschaft für Softwareentwicklung und Unternehmertum. Ich habe ein umfassendes Verständnis des Softwareentwicklungslebenszyklus und bin ein schneller Lerner und engagierter Teamplayer. Ich suche immer nach neuen Herausforderungen und Wachstumschancen und bin bestrebt, innovative und wirkungsvolle Lösungen zu schaffen.",
+      "about.techEnthusiast": "Technikbegeistert mit einer Leidenschaft für Entwicklung.",
+      "about.techCore": "Mein Tech-Kern",
+      "about.startProject": "Möchten Sie gemeinsam ein Projekt starten?",
+      "about.copyEmail": "Meine E-Mail-Adresse kopieren",
+      "about.emailCopied": "E-Mail kopiert!",
+      "experience.work": "Meine Berufserfahrung",
+      "experience.volunteering": "Meine ehrenamtliche Erfahrung",
+      "projects.title": "Eine kleine Auswahl",
+      "projects.recent": "aktueller Projekte",
+      "projects.checkDetails": "Details anzeigen",
+      "contact.title": "Bereit, Ihre digitale Präsenz auf die nächste Stufe zu heben?",
+      "contact.subtitle": "Kontaktieren Sie mich noch heute und lassen Sie uns besprechen, wie ich Ihnen helfen kann, Ihre Ziele zu erreichen.",
+      "contact.name": "Ihr Name",
+      "contact.namePlaceholder": "Wie ist Ihr Name?",
+      "contact.email": "Ihre E-Mail",
+      "contact.emailPlaceholder": "Wie lautet Ihre E-Mail-Adresse?",
+      "contact.message": "Ihre Nachricht",
+      "contact.messagePlaceholder": "Was möchten Sie sagen?",
+      "contact.submit": "Kontakt aufnehmen",
+      "footer.copyright": "©2026 Aymen Guedri",
+      "footer.madeWith": "Mit Liebe ❤️ und Magie ✨ gemacht"
+    }
+  },
+  es: {
+    translation: {
+      "nav.home": "Inicio",
+      "nav.about": "Acerca de",
+      "nav.experience": "Experiencia",
+      "nav.projects": "Proyectos",
+      "nav.contact": "Contacto",
+      "hero.greeting": "Hola, soy 👋 Aymen Guedri",
+      "hero.and": "y soy",
+      "hero.role": "un ingeniero de software",
+      "hero.resume": "Ver mi currículum",
+      "about.title": "Acerca de mí",
+      "about.name": "Aymen Guedri",
+      "about.description": "Aymen Guedri, estudiante de ingeniería de software en la Universidad TEK-UP con pasión por el desarrollo de software y el emprendimiento. Tengo una comprensión integral del ciclo de vida del desarrollo de software y soy un aprendiz rápido y un jugador de equipo dedicado. Siempre busco nuevos desafíos y oportunidades de crecimiento y estoy motivado para innovar y crear soluciones impactantes.",
+      "about.techEnthusiast": "Entusiasta de la tecnología con pasión por el desarrollo.",
+      "about.techCore": "Mi núcleo tecnológico",
+      "about.startProject": "¿Quieres comenzar un proyecto juntos?",
+      "about.copyEmail": "Copiar mi dirección de correo electrónico",
+      "about.emailCopied": "¡Correo electrónico copiado!",
+      "experience.work": "Mi experiencia laboral",
+      "experience.volunteering": "Mi experiencia de voluntariado",
+      "projects.title": "Una pequeña selección de",
+      "projects.recent": "proyectos recientes",
+      "projects.checkDetails": "Ver detalles",
+      "contact.title": "¿Listo para llevar tu presencia digital al siguiente nivel?",
+      "contact.subtitle": "Contáctame hoy y hablemos sobre cómo puedo ayudarte a alcanzar tus objetivos.",
+      "contact.name": "Tu nombre",
+      "contact.namePlaceholder": "¿Cuál es tu nombre?",
+      "contact.email": "Tu correo electrónico",
+      "contact.emailPlaceholder": "¿Cuál es tu dirección de correo electrónico?",
+      "contact.message": "Tu mensaje",
+      "contact.messagePlaceholder": "¿Qué quieres decir?",
+      "contact.submit": "Pongámonos en contacto",
+      "footer.copyright": "©2026 Aymen Guedri",
+      "footer.madeWith": "Hecho con amor ❤️ y magia ✨"
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: 'en',
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+export default i18n;

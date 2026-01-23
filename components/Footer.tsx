@@ -1,3 +1,5 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
@@ -8,8 +10,10 @@ import { styles } from "./styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "./hoc";
 import { slideIn } from "./utils/motion";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
@@ -93,7 +97,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full pt-20 pb-10" id="contact" key={i18n.language}>
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
           src="/footer-grid.svg"
@@ -104,18 +108,16 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          {t('contact.title')}
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          {t('contact.subtitle')}
         </p>
       </div>
       <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+          className="flex-[0.75] bg-black-100 p-8 rounded-2xl w-full"
         >
           <form
             ref={formRef}
@@ -123,53 +125,49 @@ const Footer = () => {
             className="mt-12 flex flex-col gap-8"
           >
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Name</span>
+              <span className="text-white font-medium mb-4">{t('contact.name')}</span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder={t('contact.namePlaceholder')}
                 className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
                 required
               />
             </label>
 
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your email</span>
+              <span className="text-white font-medium mb-4">{t('contact.email')}</span>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your email address?"
+                placeholder={t('contact.emailPlaceholder')}
                 className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
                 required
               />
             </label>
 
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Message</span>
+              <span className="text-white font-medium mb-4">{t('contact.message')}</span>
               <textarea
                 rows={7}
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What you want to say?"
+                placeholder={t('contact.messagePlaceholder')}
                 className="bg-tertiary py-4 px-3 text-white rounded-lg outline-none border-none font-medium custom-placeholder"
                 required
               />
             </label>
 
             <MagicButton
-              title="Let's get in touch"
+              title={t('contact.submit')}
               icon={<FaLocationArrow />}
               position="right"
-              handleClick={() =>
-                formRef.current?.dispatchEvent(
-                  new Event("submit", { cancelable: true, bubbles: true })
-                )
-              }
+              otherClasses="!bg-transparent"
             />
           </form>
           {message && (
@@ -193,11 +191,11 @@ const Footer = () => {
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          &copy;2026 Aymen Guedri
+          {t('footer.copyright')}
         </p>
 
         <p className="md:text-base text-sm md:font-normal font-light">
-          Made with love ❤️ and magic ✨
+          {t('footer.madeWith')}
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">

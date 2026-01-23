@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -7,55 +9,20 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import headerImg from "./aymen.png";
 import "animate.css";
 import styles from "./Hero.module.css";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
-  const toRotate = ["a Full stack Developer", "a Designer", "an Entrepreneur"];
-  const typingDelay = 100;
-  const deletingDelay = 50;
-  const pauseDelay = 1500;
+  const { t, i18n } = useTranslation();
   const [imageVisible, setImageVisible] = useState(false);
-
-  useEffect(() => {
-    let ticker = setTimeout(
-      () => {
-        tick();
-      },
-      isDeleting ? deletingDelay : typingDelay
-    );
-
-    return () => {
-      clearTimeout(ticker);
-    };
-  }, [text, isDeleting]);
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
     setImageVisible(true);
   }, []);
 
-  const tick = () => {
-    const i = loopNum % toRotate.length;
-    const fullText = toRotate[i];
-
-    if (isDeleting) {
-      setText((prevText) => prevText.slice(0, -1));
-    } else {
-      setText((prevText) => fullText.slice(0, prevText.length + 1));
-    }
-
-    if (!isDeleting && text === fullText) {
-      setTimeout(() => {
-        setIsDeleting(true);
-      }, pauseDelay);
-    } else if (isDeleting && text === "") {
-      setTimeout(() => {
-        setIsDeleting(false);
-        setLoopNum((prevLoopNum) => prevLoopNum + 1);
-      }, pauseDelay);
-    }
-  };
+  useEffect(() => {
+    setKey(prev => prev + 1);
+  }, [i18n.language]);
 
   return (
     <div className="pb-20 pt-36 relative">
@@ -84,16 +51,19 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row justify-between items-center relative my-20 z-10 max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-start justify-center flex-1 space-y-6">
           <TextGenerateEffect
-            words="Hi, it's me 👋 Aymen Guedri"
+            key={`greeting-${key}`}
+            words={t('hero.greeting')}
             className="text-left text-lg md:text-5xl lg:text-6xl"
           />
           <h1 className="text-left text-lg md:text-5xl lg:text-4xl">
             <TextGenerateEffect
-              words="and I'm"
+              key={`and-${key}`}
+              words={t('hero.and')}
               className="text-left text-lg md:text-4xl lg:text-4xl"
             />
             <TextGenerateEffect
-              words="a software engineer"
+              key={`role-${key}`}
+              words={t('hero.role')}
               className="text-left text-lg md:text-4xl lg:text-4xl"
             />
           </h1>
@@ -103,7 +73,7 @@ const Hero = () => {
             target="_blank"
           >
             <MagicButton
-              title="Show my resume"
+              title={t('hero.resume')}
               icon={<FaLocationArrow />}
               position="right"
             />
