@@ -86,7 +86,6 @@ export const FloatingNav = ({
             <span className=" text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
-        <LanguageSwitcher />
       </motion.div>
     </AnimatePresence>
   );
