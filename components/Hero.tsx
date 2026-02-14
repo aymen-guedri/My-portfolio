@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    setKey(prev => prev + 1);
+    setKey((prev) => prev + 1);
   }, [i18n.language]);
 
   return (
@@ -52,28 +52,28 @@ const Hero = () => {
         <div className="flex flex-col items-start justify-center flex-1 space-y-6">
           <TextGenerateEffect
             key={`greeting-${key}`}
-            words={t('hero.greeting')}
+            words={t("hero.greeting")}
             className="text-left text-lg md:text-5xl lg:text-6xl"
           />
           <h1 className="text-left text-lg md:text-5xl lg:text-4xl">
             <TextGenerateEffect
               key={`and-${key}`}
-              words={t('hero.and')}
+              words={t("hero.and")}
               className="text-left text-lg md:text-4xl lg:text-4xl"
             />
             <TextGenerateEffect
               key={`role-${key}`}
-              words={t('hero.role')}
+              words={t("hero.role")}
               className="text-left text-lg md:text-4xl lg:text-4xl"
             />
           </h1>
 
           <a
-            href="https://drive.google.com/file/d/1ena-DWEOVPQifXEYuDMqQ0C4Eh6bf539/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_GQKzgI2kXgt7DnCAlloQtd3m78qyBri/view?usp=sharing"
             target="_blank"
           >
             <MagicButton
-              title={t('hero.resume')}
+              title={t("hero.resume")}
               icon={<FaLocationArrow />}
               position="right"
             />

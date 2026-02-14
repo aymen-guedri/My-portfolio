@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 
 const languages = [
-  { code: "en", flag: "🇬🇧", name: "English", color: "#3B82F6" },
-  { code: "fr", flag: "🇫🇷", name: "Français", color: "#EF4444" },
-  { code: "de", flag: "🇩🇪", name: "Deutsch", color: "#F59E0B" },
-  { code: "es", flag: "🇪🇸", name: "Español", color: "#10B981" },
+  { code: "en", flagCode: "gb", name: "English", color: "#3B82F6" },
+  { code: "fr", flagCode: "fr", name: "Français", color: "#EF4444" },
+  { code: "de", flagCode: "de", name: "Deutsch", color: "#F59E0B" },
+  { code: "es", flagCode: "es", name: "Español", color: "#10B981" },
 ];
 
 const LanguageOrbit: React.FC = () => {
@@ -96,22 +96,28 @@ const LanguageOrbit: React.FC = () => {
                         }}
                         onHoverStart={() => setHoveredLang(lang.code)}
                         onHoverEnd={() => setHoveredLang(null)}
-                        className="relative rounded-full flex items-center justify-center cursor-pointer"
+                        className="relative rounded-full flex items-center justify-center cursor-pointer overflow-hidden backdrop-blur-sm"
                         whileHover={{ scale: 1.3 }}
                         whileTap={{ scale: 0.9 }}
                         style={{
                           width: isCurrentLang ? '80px' : '64px',
                           height: isCurrentLang ? '80px' : '64px',
-                          background: `radial-gradient(circle at 30% 30%, ${lang.color}dd, ${lang.color}66)`,
+                          background: `radial-gradient(circle at 30% 30%, ${lang.color}22, ${lang.color}11)`,
                           boxShadow: isCurrentLang 
-                            ? `0 0 50px ${lang.color}cc, inset 0 0 30px ${lang.color}66`
-                            : `0 0 30px ${lang.color}88, inset 0 0 20px ${lang.color}44`,
+                            ? `0 0 50px ${lang.color}cc, 0 0 80px ${lang.color}66, inset 0 0 30px ${lang.color}33`
+                            : `0 0 30px ${lang.color}88, inset 0 0 20px ${lang.color}22`,
                           zIndex: isCurrentLang ? 10 : 1,
-                          pointerEvents: 'auto'
+                          pointerEvents: 'auto',
+                          border: `3px solid ${lang.color}66`
                         }}
                       >
-                        <div className={`absolute inset-0 rounded-full border-2 ${isCurrentLang ? 'border-white/50' : 'border-white/30'} animate-pulse`} />
-                        <span className={`${isCurrentLang ? 'text-4xl' : 'text-3xl'} relative z-10 drop-shadow-2xl select-none`}>{lang.flag}</span>
+                        <div className={`absolute inset-0 rounded-full border-2 ${isCurrentLang ? 'border-white/30' : 'border-white/20'} animate-pulse`} />
+                        <img 
+                          src={`https://flagcdn.com/w160/${lang.flagCode}.png`}
+                          alt={lang.name}
+                          className={`${isCurrentLang ? 'w-12 h-12' : 'w-10 h-10'} relative z-10 rounded-full object-cover`}
+                          style={{ filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.5))' }}
+                        />
                         
                         {hoveredLang === lang.code && (
                           <motion.div
@@ -134,7 +140,7 @@ const LanguageOrbit: React.FC = () => {
 
       <motion.button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="relative w-20 h-20 rounded-full flex items-center justify-center cursor-pointer overflow-hidden"
+        className="relative w-20 h-20 rounded-full flex items-center justify-center cursor-pointer overflow-hidden backdrop-blur-sm"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         animate={{ 
@@ -142,18 +148,24 @@ const LanguageOrbit: React.FC = () => {
           opacity: isExpanded ? 0 : 1,
           scale: isExpanded ? 0 : 1,
           boxShadow: isExpanded 
-            ? `0 0 60px ${currentLang.color}aa, inset 0 0 30px ${currentLang.color}66`
-            : `0 0 40px ${currentLang.color}66, inset 0 0 20px ${currentLang.color}44`
+            ? `0 0 60px ${currentLang.color}aa, 0 0 100px ${currentLang.color}66, inset 0 0 30px ${currentLang.color}33`
+            : `0 0 40px ${currentLang.color}88, 0 0 70px ${currentLang.color}55, inset 0 0 20px ${currentLang.color}22`
         }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
         style={{
-          background: `radial-gradient(circle at 30% 30%, ${currentLang.color}ff, ${currentLang.color}88)`,
+          background: `radial-gradient(circle at 30% 30%, ${currentLang.color}33, ${currentLang.color}11)`,
           pointerEvents: isExpanded ? 'none' : 'auto',
-          visibility: isExpanded ? 'hidden' : 'visible'
+          visibility: isExpanded ? 'hidden' : 'visible',
+          border: `4px solid ${currentLang.color}88`
         }}
       >
         <div className="absolute inset-0 rounded-full border-4 border-white/20" />
-        <span className="text-5xl relative z-10 drop-shadow-2xl">{currentLang.flag}</span>
+        <img 
+          src={`https://flagcdn.com/w160/${currentLang.flagCode}.png`}
+          alt={currentLang.name}
+          className="w-14 h-14 relative z-10 rounded-full object-cover"
+          style={{ filter: 'drop-shadow(0 6px 16px rgba(0,0,0,0.6))' }}
+        />
       </motion.button>
 
       {isExpanded && (
