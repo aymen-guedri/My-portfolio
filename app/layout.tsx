@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import headerImg from "../assets/img/aymen.png";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <meta property="og:image" content="https://aymen-guedri.me/aymen-logo.png" />
         <meta property="og:url" content="https://aymen-guedri.me" />
         <meta property="og:type" content="website" />
+        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         <script dangerouslySetInnerHTML={{
           __html: `
             if (typeof window !== 'undefined') {
