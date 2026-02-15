@@ -17,6 +17,7 @@ import {
   FaCss3Alt,
   FaJs,
   FaBrain,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiDjango,
@@ -26,6 +27,9 @@ import {
   SiUml,
   SiFigma,
   SiMqtt,
+  SiPhp,
+  SiWordpress,
+  SiPlaywright,
 } from "react-icons/si";
 
 const skillIcons: { [key: string]: JSX.Element } = {
@@ -37,6 +41,11 @@ const skillIcons: { [key: string]: JSX.Element } = {
   reactjs: <FaReact />,
   nodejs: <FaNodeJs />,
   nextjs: <SiNextdotjs />,
+  php: <SiPhp />,
+  wordpress: <SiWordpress />,
+  playwright: <SiPlaywright />,
+  github: <FaGithub />,
+  agile: <FaBusinessTime />,
   html: <FaHtml5 />,
   css: <FaCss3Alt />,
   javascript: <FaJs />,
