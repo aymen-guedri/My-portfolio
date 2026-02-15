@@ -22,6 +22,12 @@ import {
   SiArduino,
   SiRaspberrypi,
   SiMqtt,
+  SiWordpress,
+  SiPhp,
+  SiFigma,
+  SiIonic,
+  SiFirebase,
+  SiStripe,
 } from "react-icons/si";
 
 const techIcons: { [key: string]: JSX.Element } = {
@@ -36,6 +42,12 @@ const techIcons: { [key: string]: JSX.Element } = {
   "/mqtt.png": <SiMqtt />,
   "/rasberry.png": <SiRaspberrypi />,
   "/Youtube_logo.png": <FaYoutube />,
+  "/wordpress.svg": <SiWordpress />,
+  "/php.svg": <SiPhp />,
+  "/figma.svg": <SiFigma />,
+  "/ionic.svg": <SiIonic />,
+  "/firebase.svg": <SiFirebase />,
+  "/stripe.svg": <SiStripe />,
 };
 
 const RecentProjects = () => {
@@ -75,6 +87,12 @@ const RecentProjects = () => {
           >
             <PinContainer title={item.title} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-80 w-full overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                {item.isProduction && (
+                  <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-black/80 backdrop-blur-sm border border-purple-500/50 text-purple-300 text-[10px] font-semibold px-2.5 py-1 rounded-md shadow-xl">
+                    <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                    LIVE
+                  </div>
+                )}
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
@@ -88,13 +106,17 @@ const RecentProjects = () => {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className={`absolute inset-0 w-full h-full ${item.img === '/bringzz.png' || item.img === '/ionic.png' ? 'object-contain' : 'object-cover'}`}
                 />
               </div>
 
               <h1 className="font-bold lg:text-xl md:text-lg text-base line-clamp-1">
                 {item.title}
               </h1>
+
+              {item.company && (
+                <p className="text-xs text-purple-400 font-semibold mt-1">By {item.company}</p>
+              )}
 
               <p className="sm:text-sm md:text-sm text-xs font-light text-gray-400">
                 {item.des}
