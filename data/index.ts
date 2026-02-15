@@ -31,7 +31,7 @@ export const gridItems = [
     id: 3,
     title: "",
     description:
-      "Aymen Guedri, a software engineering student at TEK-UP University with a passion for software development and entrepreneurship. I have a comprehensive understanding of the software development life cycle and am a quick learner and dedicated team player. I am always seeking new challenges and opportunities for growth and am driven to innovate and create impactful solutions.",
+      "Aymen Guedri, a final-year software engineering student (Master's degree level) at TEK-UP University with a passion for software development and entrepreneurship. I have a comprehensive understanding of the software development life cycle and am a quick learner and dedicated team player. I am always seeking new challenges and opportunities for growth and am driven to innovate and create impactful solutions. Open to job opportunities and relocation to Europe and Canada.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -105,7 +105,7 @@ export const projects = [
     id: 4,
     title: "LynxReaders",
     des: " LynxReaders is a platform that helps people to sell and buy used books for a better price",
-    img: "/Lynxreaders.png",
+    img: "/lynxreaders.png",
     iconLists: [
       "/re.svg",
       "/tail.svg",
@@ -136,7 +136,7 @@ export const projects = [
   {
     id: 6,
     title: "Smart System for the elderly",
-    des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay.",
+    des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay. Developed through IEEE RAS Chapter INSAT.",
     img: "/system.jpg",
     iconLists: ["/re.svg", "/rasberry.png", "/iot.png", "/mqtt.png"],
     link: "",
@@ -151,14 +151,6 @@ export const projects = [
   },
   {
     id: 8,
-    title: "Soliya connect program",
-    des: "how will life be after covid 19",
-    img: "/soliya2.jpg",
-    iconLists: ["/Youtube_logo.png"],
-    link: "https://youtu.be/QkPhYnKfMvg?si=B9ITWoot7N2lQ-8n",
-  },
-  {
-    id: 10,
     title: "Soliya connect program",
     des: "how will the world be prepared if another pandemic came into existence",
     img: "/soliya2.png",
