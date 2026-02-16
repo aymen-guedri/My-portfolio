@@ -5,12 +5,7 @@ import { projects } from "@/data";
 import { getTranslatedData } from "@/data/translatedData";
 import { PinContainer } from "./ui/Pin";
 import { useTranslation } from "react-i18next";
-import {
-  FaReact,
-  FaNodeJs,
-  FaMicrochip,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaMicrochip, FaYoutube } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiTypescript,
@@ -50,17 +45,17 @@ const techIcons: { [key: string]: JSX.Element } = {
 const RecentProjectsMobile = () => {
   const { t, i18n } = useTranslation();
   const translatedData = getTranslatedData(i18n.language);
-  
+
   const mergedProjects = projects.map((proj, index) => ({
     ...proj,
-    ...translatedData.projects[index]
+    ...translatedData.projects[index],
   }));
 
   return (
     <div className="py-20" key={i18n.language}>
       <h1 className="heading">
-        {t('projects.title')}{" "}
-        <span className="text-purple">{t('projects.recent')}</span>
+        {t("projects.title")}{" "}
+        <span className="text-purple">{t("projects.recent")}</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {mergedProjects.map((item) => (
@@ -68,10 +63,7 @@ const RecentProjectsMobile = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
-            <PinContainer
-              title={item.title}
-              href={item.link}
-            >
+            <PinContainer title={item.title} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 {item.isProduction && (
                   <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-black/80 backdrop-blur-sm border border-purple-500/50 text-purple-300 text-[10px] font-semibold px-2.5 py-1 rounded-md shadow-xl">
@@ -88,7 +80,7 @@ const RecentProjectsMobile = () => {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className={`absolute inset-0 w-full h-full ${item.img === '/bringzz.png' || item.img === '/ionic.png' ? 'object-contain' : 'object-cover'}`}
+                  className={`absolute inset-0 w-full h-full ${item.img === "/bringzz.png" || item.img === "/ionic.png" ? "object-contain" : "object-cover"}`}
                 />
               </div>
 
@@ -97,7 +89,9 @@ const RecentProjectsMobile = () => {
               </h1>
 
               {item.company && (
-                <p className="text-xs text-purple-400 font-semibold mt-1">By {item.company}</p>
+                <p className="text-xs text-purple-400 font-semibold mt-1">
+                  By {item.company}
+                </p>
               )}
 
               <p className="sm:text-sm md:text-sm text-xs font-light text-gray-400">
@@ -128,7 +122,7 @@ const RecentProjectsMobile = () => {
                     className="flex justify-center items-center"
                   >
                     <p className="sm:text-sm md:text-sm text-xs font-light text-purple">
-                      {t('projects.checkDetails')}
+                      {t("projects.checkDetails")}
                     </p>
                     <FaLocationArrow className="ms-3" color="#CBACF9" />
                   </a>
