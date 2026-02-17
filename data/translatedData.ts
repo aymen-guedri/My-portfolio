@@ -2,102 +2,526 @@ export const getTranslatedData = (lang: string) => {
   const data: any = {
     en: {
       projects: [
-        { id: 1, title: "Bringzz – Pharmacy Marketplace Platform", des: "Contributed to a German pharmacy marketplace platform where pharmacies list products and customers can search and order medications. The system supports three roles: customer, pharmacist, and shopper. Includes prescription-based product handling using OCR scanning to validate medical prescriptions before purchase." },
-        { id: 2, title: "Janane Car – Car Rental Platform", des: "Contributed to the development of a production-ready car rental platform serving tourists and local customers in Tunisia. The platform allows users to browse vehicles, make reservations, and manage bookings online." },
-        { id: 3, title: "HMH – Home Furniture E-commerce", des: "Contributed to the development of a home furniture e-commerce platform built entirely using WordPress, enabling customers to browse and purchase furniture products online." },
-        { id: 4, title: "LynxReaders", des: "LynxReaders is a platform that helps people to sell and buy used books for a better price" },
-        { id: 5, title: "Parking App", des: "A mobile application to see all available parking spots, make reservations, and pay for them. Developed as my final year project at TEK-UP University through the Ionic subject." },
-        { id: 6, title: "Smart door", des: "I built an IOT APP entitled 'smart door'. arguably the most important part of a connected home that allows you to easily unlock and lock your door." },
-        { id: 7, title: "Smart System for the elderly", des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay. Developed through IEEE RAS Chapter INSAT." },
-        { id: 8, title: "Global game jam", des: "Training for global game jam 2021" },
-        { id: 9, title: "Soliya connect program", des: "how will the world be prepared if another pandemic came into existence" },
+        {
+          id: 1,
+          title: "Bringzz – Pharmacy Marketplace Platform",
+          des: "Contributed to a German pharmacy marketplace platform where pharmacies list products and customers can search and order medications. The system supports three roles: customer, pharmacist, and shopper. Includes prescription-based product handling using OCR scanning to validate medical prescriptions before purchase.",
+        },
+        {
+          id: 2,
+          title: "Janane Car – Car Rental Platform",
+          des: "Contributed to the development of a production-ready car rental platform serving tourists and local customers in Tunisia. The platform allows users to browse vehicles, make reservations, and manage bookings online.",
+        },
+        {
+          id: 3,
+          title: "HMH – Home Furniture E-commerce",
+          des: "Contributed to the development of a home furniture e-commerce platform built entirely using WordPress, enabling customers to browse and purchase furniture products online.",
+        },
+        {
+          id: 4,
+          title: "LynxReaders",
+          des: "LynxReaders is a platform that helps people to sell and buy used books for a better price",
+        },
+        {
+          id: 5,
+          title: "Parking App",
+          des: "A mobile application to see all available parking spots, make reservations, and pay for them. Developed as my final year project at TEK-UP University through the Ionic subject.",
+        },
+        {
+          id: 6,
+          title: "Smart door",
+          des: "I built an IOT APP entitled 'smart door'. arguably the most important part of a connected home that allows you to easily unlock and lock your door.",
+        },
+        {
+          id: 7,
+          title: "Smart System for the elderly",
+          des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay. Developed through IEEE RAS Chapter INSAT.",
+        },
+        {
+          id: 8,
+          title: "Global game jam",
+          des: "Training for global game jam 2021",
+        },
+        {
+          id: 9,
+          title: "Soliya connect program",
+          des: "how will the world be prepared if another pandemic came into existence",
+        },
       ],
       workExperience: [
-        { id: 1, title: "Software Engineer at Eskills-agency", duration: "Jul 2024 - Present", desc: ["Built a full-scale delivery platform, designing responsive interfaces and optimizing user flows for a seamless cross-platform experience", "Contributed to a German pharmacy marketplace supporting customers, pharmacists, and shoppers, including OCR-based prescription validation", "Developed an e-commerce platform for home furniture, enabling online product browsing and secure purchasing", "Currently developing a car rental web application featuring booking workflows, vehicle management, and administrative dashboards"] },
-        { id: 2, title: "Backend developer at Flouci by Kaoun", duration: "Sep 2023 - Jun 2024", desc: ["Led the development of a backend system for a financial superapp, enhancing functionality for over 250,000 users and facilitating secure money transfers and cashless payments.", "Improved system performance and scalability by implementing a robust Django Rest API, ensuring reliable service integration and smooth operations.", "Worked closely with the front-end team to deliver a cohesive and seamless user experience"] },
-        { id: 3, title: "Full Stack Developer internship at FSB FabLab", duration: "Jan 2023 - Jun 2023", desc: ["Created the FabLab FSB website, improving digital presence and user engagement.", "Connected IoT technologies to 3D printers on the platform, enabling real-time monitoring and streamlining operations.", "Supported FabLab FSB's mission to enhance employability and entrepreneurship for approximately 3,400 students through digital fabrication tools"] },
-        { id: 4, title: "Frontend Developer (Part time) at Eskills-agency", duration: "May 2021 - Jan 2023", desc: ["Created responsive web applications, significantly enhancing user experience across various devices.", "Developed cross-platform mobile apps, consistently ensuring smooth performance for over 100 clients"] },
+        {
+          id: 1,
+          title: "Software Engineer at Eskills-agency",
+          duration: "Jul 2024 - Present",
+          desc: [
+            "Contributed to a German pharmacy marketplace supporting customers, pharmacists, and shoppers, including OCR-based prescription validation",
+            "Developed an e-commerce platform for home furniture, enabling online product browsing and secure purchasing",
+            "Currently developing a car rental web application featuring booking workflows, vehicle management, and administrative dashboards",
+          ],
+        },
+        {
+          id: 2,
+          title: "Backend developer at Flouci by Kaoun",
+          duration: "Sep 2023 - Jun 2024",
+          desc: [
+            "Led the development of a backend system for a financial superapp, enhancing functionality for over 250,000 users and facilitating secure money transfers and cashless payments.",
+            "Improved system performance and scalability by implementing a robust Django Rest API, ensuring reliable service integration and smooth operations.",
+            "Worked closely with the front-end team to deliver a cohesive and seamless user experience",
+          ],
+        },
+        {
+          id: 3,
+          title: "Full Stack Developer internship at FSB FabLab",
+          duration: "Jan 2023 - Jun 2023",
+          desc: [
+            "Created the FabLab FSB website, improving digital presence and user engagement.",
+            "Connected IoT technologies to 3D printers on the platform, enabling real-time monitoring and streamlining operations.",
+            "Supported FabLab FSB's mission to enhance employability and entrepreneurship for approximately 3,400 students through digital fabrication tools",
+          ],
+        },
+        {
+          id: 4,
+          title: "Frontend Developer (Part time) at Eskills-agency",
+          duration: "May 2021 - Jan 2023",
+          desc: [
+            "Created responsive web applications, significantly enhancing user experience across various devices.",
+            "Developed cross-platform mobile apps, consistently ensuring smooth performance for over 100 clients",
+          ],
+        },
       ],
       volunteeringExperience: [
-        { id: 1, title: "Founder of LynxCoder Club", duration: "Sep 2022 - Present", desc: ["Founded LynxCoder, creating an innovative educational platform that boosted student engagement through interactive learning experiences.", "Launched it as a university club, fostering a strong tech community.", "Achieved top 10 recognition in the Carthage Innov'Startup Challenge."] },
-        { id: 2, title: "Frontend Developer Mentor", duration: "May 2024 - Aug 2024", desc: ["Mentored participants, enhancing their approach to building scalable web applications.", "Assisted in streamlining integration and deployment workflows.", "Evaluated projects as a jury member, offering key insights on technical execution and problem-solving."] },
-        { id: 3, title: "IQ challenge Ambassador", duration: "Sep 2018 - Mar 2019", desc: ["Promoting and representing the IQ Challenge in Jendouba, ensuring widespread participation among local high school students", "Supporting participants by providing guidance and motivation throughout the competition stages."] },
-        { id: 4, title: "IoT Developer Mentor", duration: "Jul 2018 - Aug 2018", desc: ["Mentored participants at the 'IoT 4 YouthTech Camp 2018,' a program by the U.S. Embassy and MentorNations.", "Provided guidance on building Android apps and integrating IoT solutions.", "Helped participants successfully implement projects using Arduino Uno."] },
+        {
+          id: 1,
+          title: "Founder of LynxCoder Club",
+          duration: "Sep 2022 - Present",
+          desc: [
+            "Founded LynxCoder, creating an innovative educational platform that boosted student engagement through interactive learning experiences.",
+            "Launched it as a university club, fostering a strong tech community.",
+            "Achieved top 10 recognition in the Carthage Innov'Startup Challenge.",
+          ],
+        },
+        {
+          id: 2,
+          title: "Frontend Developer Mentor",
+          duration: "May 2024 - Aug 2024",
+          desc: [
+            "Mentored participants, enhancing their approach to building scalable web applications.",
+            "Assisted in streamlining integration and deployment workflows.",
+            "Evaluated projects as a jury member, offering key insights on technical execution and problem-solving.",
+          ],
+        },
+        {
+          id: 3,
+          title: "IQ challenge Ambassador",
+          duration: "Sep 2018 - Mar 2019",
+          desc: [
+            "Promoting and representing the IQ Challenge in Jendouba, ensuring widespread participation among local high school students",
+            "Supporting participants by providing guidance and motivation throughout the competition stages.",
+          ],
+        },
+        {
+          id: 4,
+          title: "IoT Developer Mentor",
+          duration: "Jul 2018 - Aug 2018",
+          desc: [
+            "Mentored participants at the 'IoT 4 YouthTech Camp 2018,' a program by the U.S. Embassy and MentorNations.",
+            "Provided guidance on building Android apps and integrating IoT solutions.",
+            "Helped participants successfully implement projects using Arduino Uno.",
+          ],
+        },
       ],
     },
     fr: {
       projects: [
-        { id: 1, title: "Bringzz – Plateforme de marché pharmaceutique", des: "Contribué à une plateforme de marché pharmaceutique allemande où les pharmacies répertorient les produits et les clients peuvent rechercher et commander des médicaments. Le système prend en charge trois rôles : client, pharmacien et acheteur. Comprend la gestion de produits basée sur ordonnance utilisant la numérisation OCR pour valider les ordonnances médicales avant l'achat." },
-        { id: 2, title: "Janane Car – Plateforme de location de voitures", des: "Contribué au développement d'une plateforme de location de voitures prête pour la production desservant les touristes et les clients locaux en Tunisie. La plateforme permet aux utilisateurs de parcourir les véhicules, de faire des réservations et de gérer les réservations en ligne." },
-        { id: 3, title: "HMH – E-commerce de meubles pour la maison", des: "Contribué au développement d'une plateforme de commerce électronique de meubles pour la maison construite entièrement avec WordPress, permettant aux clients de parcourir et d'acheter des produits de meubles en ligne." },
-        { id: 4, title: "LynxReaders", des: "LynxReaders est une plateforme qui aide les gens à vendre et acheter des livres d'occasion à un meilleur prix" },
-        { id: 5, title: "Application de Stationnement", des: "Une application mobile pour voir tous les places de parking disponibles, faire des réservations et payer. Développée comme projet de fin d'études à l'Université TEK-UP dans le cadre du cours Ionic." },
-        { id: 6, title: "Porte intelligente", des: "J'ai créé une application IOT intitulée 'porte intelligente'. C'est sans doute la partie la plus importante d'une maison connectée qui vous permet de déverrouiller et de verrouiller facilement votre porte." },
-        { id: 7, title: "Système intelligent pour les personnes âgées", des: "J'ai créé une application IOT qui garantit que les personnes âgées prennent leurs médicaments aux bonnes doses au bon moment sans délai. Développé à travers le chapitre IEEE RAS INSAT." },
-        { id: 8, title: "Global game jam", des: "Formation pour le global game jam 2021" },
-        { id: 9, title: "Programme Soliya connect", des: "comment le monde sera-t-il préparé si une autre pandémie venait à exister" },
+        {
+          id: 1,
+          title: "Bringzz – Plateforme de marché pharmaceutique",
+          des: "Contribué à une plateforme de marché pharmaceutique allemande où les pharmacies répertorient les produits et les clients peuvent rechercher et commander des médicaments. Le système prend en charge trois rôles : client, pharmacien et acheteur. Comprend la gestion de produits basée sur ordonnance utilisant la numérisation OCR pour valider les ordonnances médicales avant l'achat.",
+        },
+        {
+          id: 2,
+          title: "Janane Car – Plateforme de location de voitures",
+          des: "Contribué au développement d'une plateforme de location de voitures prête pour la production desservant les touristes et les clients locaux en Tunisie. La plateforme permet aux utilisateurs de parcourir les véhicules, de faire des réservations et de gérer les réservations en ligne.",
+        },
+        {
+          id: 3,
+          title: "HMH – E-commerce de meubles pour la maison",
+          des: "Contribué au développement d'une plateforme de commerce électronique de meubles pour la maison construite entièrement avec WordPress, permettant aux clients de parcourir et d'acheter des produits de meubles en ligne.",
+        },
+        {
+          id: 4,
+          title: "LynxReaders",
+          des: "LynxReaders est une plateforme qui aide les gens à vendre et acheter des livres d'occasion à un meilleur prix",
+        },
+        {
+          id: 5,
+          title: "Application de Stationnement",
+          des: "Une application mobile pour voir tous les places de parking disponibles, faire des réservations et payer. Développée comme projet de fin d'études à l'Université TEK-UP dans le cadre du cours Ionic.",
+        },
+        {
+          id: 6,
+          title: "Porte intelligente",
+          des: "J'ai créé une application IOT intitulée 'porte intelligente'. C'est sans doute la partie la plus importante d'une maison connectée qui vous permet de déverrouiller et de verrouiller facilement votre porte.",
+        },
+        {
+          id: 7,
+          title: "Système intelligent pour les personnes âgées",
+          des: "J'ai créé une application IOT qui garantit que les personnes âgées prennent leurs médicaments aux bonnes doses au bon moment sans délai. Développé à travers le chapitre IEEE RAS INSAT.",
+        },
+        {
+          id: 8,
+          title: "Global game jam",
+          des: "Formation pour le global game jam 2021",
+        },
+        {
+          id: 9,
+          title: "Programme Soliya connect",
+          des: "comment le monde sera-t-il préparé si une autre pandémie venait à exister",
+        },
       ],
       workExperience: [
-        { id: 1, title: "Ingénieur logiciel chez Eskills-agency", duration: "Juil 2024 - Présent", desc: ["Construit une plateforme de livraison complète, conçu des interfaces réactives et optimisé les flux utilisateurs pour une expérience multiplateforme transparente", "Contribué à un marché pharmaceutique allemand soutenant les clients, les pharmaciens et les acheteurs, incluant la validation d'ordonnances basée sur l'OCR", "Développé une plateforme e-commerce de meubles pour la maison, permettant la navigation de produits en ligne et l'achat sécurisé", "Développe actuellement une application web de location de voitures avec flux de réservation, gestion de véhicules et tableaux de bord administratifs"] },
-        { id: 2, title: "Développeur Backend chez Flouci by Kaoun", duration: "Sep 2023 - Juin 2024", desc: ["Dirigé le développement d'un système backend pour une superapp financière, améliorant les fonctionnalités pour plus de 250 000 utilisateurs et facilitant les transferts d'argent sécurisés et les paiements sans espèces.", "Amélioré les performances et l'évolutivité du système en implémentant une API REST Django robuste, assurant une intégration de service fiable et des opérations fluides.", "Travaillé en étroite collaboration avec l'équipe front-end pour offrir une expérience utilisateur cohérente et transparente"] },
-        { id: 3, title: "Stage de développeur Full Stack chez FSB FabLab", duration: "Jan 2023 - Juin 2023", desc: ["Créé le site Web FabLab FSB, améliorant la présence numérique et l'engagement des utilisateurs.", "Connecté les technologies IoT aux imprimantes 3D sur la plateforme, permettant une surveillance en temps réel et rationalisant les opérations.", "Soutenu la mission de FabLab FSB d'améliorer l'employabilité et l'entrepreneuriat pour environ 3 400 étudiants grâce aux outils de fabrication numérique"] },
-        { id: 4, title: "Développeur Frontend (Temps partiel) chez Eskills-agency", duration: "Mai 2021 - Jan 2023", desc: ["Créé des applications Web réactives, améliorant considérablement l'expérience utilisateur sur divers appareils.", "Développé des applications mobiles multiplateformes, assurant constamment des performances fluides pour plus de 100 clients"] },
+        {
+          id: 1,
+          title: "Ingénieur logiciel chez Eskills-agency",
+          duration: "Juil 2024 - Présent",
+          desc: [
+            "Contribué à un marché pharmaceutique allemand soutenant les clients, les pharmaciens et les acheteurs, incluant la validation d'ordonnances basée sur l'OCR",
+            "Développé une plateforme e-commerce de meubles pour la maison, permettant la navigation de produits en ligne et l'achat sécurisé",
+            "Développe actuellement une application web de location de voitures avec flux de réservation, gestion de véhicules et tableaux de bord administratifs",
+          ],
+        },
+        {
+          id: 2,
+          title: "Développeur Backend chez Flouci by Kaoun",
+          duration: "Sep 2023 - Juin 2024",
+          desc: [
+            "Dirigé le développement d'un système backend pour une superapp financière, améliorant les fonctionnalités pour plus de 250 000 utilisateurs et facilitant les transferts d'argent sécurisés et les paiements sans espèces.",
+            "Amélioré les performances et l'évolutivité du système en implémentant une API REST Django robuste, assurant une intégration de service fiable et des opérations fluides.",
+            "Travaillé en étroite collaboration avec l'équipe front-end pour offrir une expérience utilisateur cohérente et transparente",
+          ],
+        },
+        {
+          id: 3,
+          title: "Stage de développeur Full Stack chez FSB FabLab",
+          duration: "Jan 2023 - Juin 2023",
+          desc: [
+            "Créé le site Web FabLab FSB, améliorant la présence numérique et l'engagement des utilisateurs.",
+            "Connecté les technologies IoT aux imprimantes 3D sur la plateforme, permettant une surveillance en temps réel et rationalisant les opérations.",
+            "Soutenu la mission de FabLab FSB d'améliorer l'employabilité et l'entrepreneuriat pour environ 3 400 étudiants grâce aux outils de fabrication numérique",
+          ],
+        },
+        {
+          id: 4,
+          title: "Développeur Frontend (Temps partiel) chez Eskills-agency",
+          duration: "Mai 2021 - Jan 2023",
+          desc: [
+            "Créé des applications Web réactives, améliorant considérablement l'expérience utilisateur sur divers appareils.",
+            "Développé des applications mobiles multiplateformes, assurant constamment des performances fluides pour plus de 100 clients",
+          ],
+        },
       ],
       volunteeringExperience: [
-        { id: 1, title: "Fondateur du Club LynxCoder", duration: "Sep 2022 - Présent", desc: ["Fondé LynxCoder, créant une plateforme éducative innovante qui a stimulé l'engagement des étudiants grâce à des expériences d'apprentissage interactives.", "Lancé en tant que club universitaire, favorisant une forte communauté technologique.", "Obtenu une reconnaissance dans le top 10 du Carthage Innov'Startup Challenge."] },
-        { id: 2, title: "Mentor Développeur Frontend", duration: "Mai 2024 - Août 2024", desc: ["Mentoré des participants, améliorant leur approche de la construction d'applications Web évolutives.", "Aidé à rationaliser les flux de travail d'intégration et de déploiement.", "Évalué des projets en tant que membre du jury, offrant des informations clés sur l'exécution technique et la résolution de problèmes."] },
-        { id: 3, title: "Ambassadeur du défi IQ", duration: "Sep 2018 - Mars 2019", desc: ["Promotion et représentation du IQ Challenge à Jendouba, assurant une participation généralisée parmi les lycéens locaux", "Soutien des participants en fournissant des conseils et de la motivation tout au long des étapes de la compétition."] },
-        { id: 4, title: "Mentor Développeur IoT", duration: "Juil 2018 - Août 2018", desc: ["Mentoré des participants au 'IoT 4 YouthTech Camp 2018', un programme de l'ambassade des États-Unis et MentorNations.", "Fourni des conseils sur la création d'applications Android et l'intégration de solutions IoT.", "Aidé les participants à mettre en œuvre avec succès des projets utilisant Arduino Uno."] },
+        {
+          id: 1,
+          title: "Fondateur du Club LynxCoder",
+          duration: "Sep 2022 - Présent",
+          desc: [
+            "Fondé LynxCoder, créant une plateforme éducative innovante qui a stimulé l'engagement des étudiants grâce à des expériences d'apprentissage interactives.",
+            "Lancé en tant que club universitaire, favorisant une forte communauté technologique.",
+            "Obtenu une reconnaissance dans le top 10 du Carthage Innov'Startup Challenge.",
+          ],
+        },
+        {
+          id: 2,
+          title: "Mentor Développeur Frontend",
+          duration: "Mai 2024 - Août 2024",
+          desc: [
+            "Mentoré des participants, améliorant leur approche de la construction d'applications Web évolutives.",
+            "Aidé à rationaliser les flux de travail d'intégration et de déploiement.",
+            "Évalué des projets en tant que membre du jury, offrant des informations clés sur l'exécution technique et la résolution de problèmes.",
+          ],
+        },
+        {
+          id: 3,
+          title: "Ambassadeur du défi IQ",
+          duration: "Sep 2018 - Mars 2019",
+          desc: [
+            "Promotion et représentation du IQ Challenge à Jendouba, assurant une participation généralisée parmi les lycéens locaux",
+            "Soutien des participants en fournissant des conseils et de la motivation tout au long des étapes de la compétition.",
+          ],
+        },
+        {
+          id: 4,
+          title: "Mentor Développeur IoT",
+          duration: "Juil 2018 - Août 2018",
+          desc: [
+            "Mentoré des participants au 'IoT 4 YouthTech Camp 2018', un programme de l'ambassade des États-Unis et MentorNations.",
+            "Fourni des conseils sur la création d'applications Android et l'intégration de solutions IoT.",
+            "Aidé les participants à mettre en œuvre avec succès des projets utilisant Arduino Uno.",
+          ],
+        },
       ],
     },
     de: {
       projects: [
-        { id: 1, title: "Bringzz – Apotheken-Marktplatz-Plattform", des: "Beigetragen zu einer deutschen Apotheken-Marktplatz-Plattform, auf der Apotheken Produkte auflisten und Kunden Medikamente suchen und bestellen können. Das System unterstützt drei Rollen: Kunde, Apotheker und Käufer. Beinhaltet rezeptbasierte Produktbehandlung mit OCR-Scanning zur Validierung medizinischer Rezepte vor dem Kauf." },
-        { id: 2, title: "Janane Car – Autovermietungsplattform", des: "Beigetragen zur Entwicklung einer produktionsbereiten Autovermietungsplattform für Touristen und lokale Kunden in Tunesien. Die Plattform ermöglicht es Benutzern, Fahrzeuge zu durchsuchen, Reservierungen vorzunehmen und Buchungen online zu verwalten." },
-        { id: 3, title: "HMH – Hausmöbel E-Commerce", des: "Beigetragen zur Entwicklung einer Hausmöbel-E-Commerce-Plattform, die vollständig mit WordPress erstellt wurde und es Kunden ermöglicht, Möbelprodukte online zu durchsuchen und zu kaufen." },
-        { id: 4, title: "LynxReaders", des: "LynxReaders ist eine Plattform, die Menschen hilft, gebrauchte Bücher zu einem besseren Preis zu verkaufen und zu kaufen" },
-        { id: 5, title: "Parkplatz-App", des: "Eine mobile Anwendung, um alle verfügbaren Parkplätze zu sehen, Reservierungen vorzunehmen und zu bezahlen. Entwickelt als mein Abschlussprojekt an der TEK-UP Universität im Rahmen des Ionic-Fachs." },
-        { id: 6, title: "Intelligente Tür", des: "Ich habe eine IOT-APP mit dem Titel 'intelligente Tür' erstellt. Wohl der wichtigste Teil eines vernetzten Hauses, mit dem Sie Ihre Tür einfach auf- und abschließen können." },
-        { id: 7, title: "Intelligentes System für ältere Menschen", des: "Ich habe eine IOT-App erstellt, die sicherstellt, dass ältere Menschen ihre Medikamente in den richtigen Dosen zur richtigen Zeit ohne Verzögerung einnehmen. Entwickelt durch das IEEE RAS Chapter INSAT." },
-        { id: 8, title: "Global game jam", des: "Training für Global Game Jam 2021" },
-        { id: 9, title: "Soliya Connect-Programm", des: "Wie wird die Welt vorbereitet sein, wenn eine weitere Pandemie auftritt" },
+        {
+          id: 1,
+          title: "Bringzz – Apotheken-Marktplatz-Plattform",
+          des: "Beigetragen zu einer deutschen Apotheken-Marktplatz-Plattform, auf der Apotheken Produkte auflisten und Kunden Medikamente suchen und bestellen können. Das System unterstützt drei Rollen: Kunde, Apotheker und Käufer. Beinhaltet rezeptbasierte Produktbehandlung mit OCR-Scanning zur Validierung medizinischer Rezepte vor dem Kauf.",
+        },
+        {
+          id: 2,
+          title: "Janane Car – Autovermietungsplattform",
+          des: "Beigetragen zur Entwicklung einer produktionsbereiten Autovermietungsplattform für Touristen und lokale Kunden in Tunesien. Die Plattform ermöglicht es Benutzern, Fahrzeuge zu durchsuchen, Reservierungen vorzunehmen und Buchungen online zu verwalten.",
+        },
+        {
+          id: 3,
+          title: "HMH – Hausmöbel E-Commerce",
+          des: "Beigetragen zur Entwicklung einer Hausmöbel-E-Commerce-Plattform, die vollständig mit WordPress erstellt wurde und es Kunden ermöglicht, Möbelprodukte online zu durchsuchen und zu kaufen.",
+        },
+        {
+          id: 4,
+          title: "LynxReaders",
+          des: "LynxReaders ist eine Plattform, die Menschen hilft, gebrauchte Bücher zu einem besseren Preis zu verkaufen und zu kaufen",
+        },
+        {
+          id: 5,
+          title: "Parkplatz-App",
+          des: "Eine mobile Anwendung, um alle verfügbaren Parkplätze zu sehen, Reservierungen vorzunehmen und zu bezahlen. Entwickelt als mein Abschlussprojekt an der TEK-UP Universität im Rahmen des Ionic-Fachs.",
+        },
+        {
+          id: 6,
+          title: "Intelligente Tür",
+          des: "Ich habe eine IOT-APP mit dem Titel 'intelligente Tür' erstellt. Wohl der wichtigste Teil eines vernetzten Hauses, mit dem Sie Ihre Tür einfach auf- und abschließen können.",
+        },
+        {
+          id: 7,
+          title: "Intelligentes System für ältere Menschen",
+          des: "Ich habe eine IOT-App erstellt, die sicherstellt, dass ältere Menschen ihre Medikamente in den richtigen Dosen zur richtigen Zeit ohne Verzögerung einnehmen. Entwickelt durch das IEEE RAS Chapter INSAT.",
+        },
+        {
+          id: 8,
+          title: "Global game jam",
+          des: "Training für Global Game Jam 2021",
+        },
+        {
+          id: 9,
+          title: "Soliya Connect-Programm",
+          des: "Wie wird die Welt vorbereitet sein, wenn eine weitere Pandemie auftritt",
+        },
       ],
       workExperience: [
-        { id: 1, title: "Software-Ingenieur bei Eskills-agency", duration: "Juli 2024 - Heute", desc: ["Erstellte eine umfassende Lieferplattform, entwarf responsive Oberflächen und optimierte Benutzerflüsse für ein nahtloses plattformübergreifendes Erlebnis", "Beigetragen zu einem deutschen Apothekenmarktplatz, der Kunden, Apotheker und Käufer unterstützt, einschließlich OCR-basierter Rezeptvalidierung", "Entwickelte eine E-Commerce-Plattform für Hausmöbel, die Online-Produktsuche und sicheren Kauf ermöglicht", "Entwickle derzeit eine Autovermietungs-Webanwendung mit Buchungsworkflows, Fahrzeugverwaltung und administrativen Dashboards"] },
-        { id: 2, title: "Backend-Entwickler bei Flouci by Kaoun", duration: "Sep 2023 - Juni 2024", desc: ["Leitete die Entwicklung eines Backend-Systems für eine Finanz-Superapp, verbesserte die Funktionalität für über 250.000 Benutzer und ermöglichte sichere Geldtransfers und bargeldlose Zahlungen.", "Verbesserte Systemleistung und Skalierbarkeit durch Implementierung einer robusten Django Rest API, die zuverlässige Serviceintegration und reibungslose Abläufe gewährleistet.", "Arbeitete eng mit dem Frontend-Team zusammen, um ein kohärentes und nahtloses Benutzererlebnis zu liefern"] },
-        { id: 3, title: "Full-Stack-Entwickler-Praktikum bei FSB FabLab", duration: "Jan 2023 - Juni 2023", desc: ["Erstellte die FabLab FSB-Website und verbesserte die digitale Präsenz und das Benutzerengagement.", "Verband IoT-Technologien mit 3D-Druckern auf der Plattform, ermöglichte Echtzeitüberwachung und optimierte Abläufe.", "Unterstützte die Mission von FabLab FSB, die Beschäftigungsfähigkeit und das Unternehmertum für etwa 3.400 Studenten durch digitale Fertigungswerkzeuge zu verbessern"] },
-        { id: 4, title: "Frontend-Entwickler (Teilzeit) bei Eskills-agency", duration: "Mai 2021 - Jan 2023", desc: ["Erstellte responsive Webanwendungen und verbesserte die Benutzererfahrung auf verschiedenen Geräten erheblich.", "Entwickelte plattformübergreifende mobile Apps und stellte durchgehend reibungslose Leistung für über 100 Kunden sicher"] },
+        {
+          id: 1,
+          title: "Software-Ingenieur bei Eskills-agency",
+          duration: "Juli 2024 - Heute",
+          desc: [
+            "Beigetragen zu einem deutschen Apothekenmarktplatz, der Kunden, Apotheker und Käufer unterstützt, einschließlich OCR-basierter Rezeptvalidierung",
+            "Entwickelte eine E-Commerce-Plattform für Hausmöbel, die Online-Produktsuche und sicheren Kauf ermöglicht",
+            "Entwickle derzeit eine Autovermietungs-Webanwendung mit Buchungsworkflows, Fahrzeugverwaltung und administrativen Dashboards",
+          ],
+        },
+        {
+          id: 2,
+          title: "Backend-Entwickler bei Flouci by Kaoun",
+          duration: "Sep 2023 - Juni 2024",
+          desc: [
+            "Leitete die Entwicklung eines Backend-Systems für eine Finanz-Superapp, verbesserte die Funktionalität für über 250.000 Benutzer und ermöglichte sichere Geldtransfers und bargeldlose Zahlungen.",
+            "Verbesserte Systemleistung und Skalierbarkeit durch Implementierung einer robusten Django Rest API, die zuverlässige Serviceintegration und reibungslose Abläufe gewährleistet.",
+            "Arbeitete eng mit dem Frontend-Team zusammen, um ein kohärentes und nahtloses Benutzererlebnis zu liefern",
+          ],
+        },
+        {
+          id: 3,
+          title: "Full-Stack-Entwickler-Praktikum bei FSB FabLab",
+          duration: "Jan 2023 - Juni 2023",
+          desc: [
+            "Erstellte die FabLab FSB-Website und verbesserte die digitale Präsenz und das Benutzerengagement.",
+            "Verband IoT-Technologien mit 3D-Druckern auf der Plattform, ermöglichte Echtzeitüberwachung und optimierte Abläufe.",
+            "Unterstützte die Mission von FabLab FSB, die Beschäftigungsfähigkeit und das Unternehmertum für etwa 3.400 Studenten durch digitale Fertigungswerkzeuge zu verbessern",
+          ],
+        },
+        {
+          id: 4,
+          title: "Frontend-Entwickler (Teilzeit) bei Eskills-agency",
+          duration: "Mai 2021 - Jan 2023",
+          desc: [
+            "Erstellte responsive Webanwendungen und verbesserte die Benutzererfahrung auf verschiedenen Geräten erheblich.",
+            "Entwickelte plattformübergreifende mobile Apps und stellte durchgehend reibungslose Leistung für über 100 Kunden sicher",
+          ],
+        },
       ],
       volunteeringExperience: [
-        { id: 1, title: "Gründer des LynxCoder Clubs", duration: "Sep 2022 - Heute", desc: ["Gründete LynxCoder und schuf eine innovative Bildungsplattform, die das Engagement der Studenten durch interaktive Lernerfahrungen steigerte.", "Als Universitätsclub gestartet, der eine starke Tech-Community fördert.", "Erreichte Top-10-Anerkennung in der Carthage Innov'Startup Challenge."] },
-        { id: 2, title: "Frontend-Entwickler-Mentor", duration: "Mai 2024 - Aug 2024", desc: ["Mentorierte Teilnehmer und verbesserte ihren Ansatz zum Aufbau skalierbarer Webanwendungen.", "Unterstützte bei der Optimierung von Integrations- und Bereitstellungsworkflows.", "Bewertete Projekte als Jurymitglied und bot wichtige Einblicke in technische Ausführung und Problemlösung."] },
-        { id: 3, title: "IQ-Challenge-Botschafter", duration: "Sep 2018 - März 2019", desc: ["Förderung und Vertretung der IQ Challenge in Jendouba, um eine breite Teilnahme lokaler Gymnasiasten sicherzustellen", "Unterstützung der Teilnehmer durch Anleitung und Motivation während der Wettbewerbsphasen."] },
-        { id: 4, title: "IoT-Entwickler-Mentor", duration: "Juli 2018 - Aug 2018", desc: ["Mentorierte Teilnehmer beim 'IoT 4 YouthTech Camp 2018', einem Programm der US-Botschaft und MentorNations.", "Gab Anleitung zum Erstellen von Android-Apps und zur Integration von IoT-Lösungen.", "Half Teilnehmern bei der erfolgreichen Implementierung von Projekten mit Arduino Uno."] },
+        {
+          id: 1,
+          title: "Gründer des LynxCoder Clubs",
+          duration: "Sep 2022 - Heute",
+          desc: [
+            "Gründete LynxCoder und schuf eine innovative Bildungsplattform, die das Engagement der Studenten durch interaktive Lernerfahrungen steigerte.",
+            "Als Universitätsclub gestartet, der eine starke Tech-Community fördert.",
+            "Erreichte Top-10-Anerkennung in der Carthage Innov'Startup Challenge.",
+          ],
+        },
+        {
+          id: 2,
+          title: "Frontend-Entwickler-Mentor",
+          duration: "Mai 2024 - Aug 2024",
+          desc: [
+            "Mentorierte Teilnehmer und verbesserte ihren Ansatz zum Aufbau skalierbarer Webanwendungen.",
+            "Unterstützte bei der Optimierung von Integrations- und Bereitstellungsworkflows.",
+            "Bewertete Projekte als Jurymitglied und bot wichtige Einblicke in technische Ausführung und Problemlösung.",
+          ],
+        },
+        {
+          id: 3,
+          title: "IQ-Challenge-Botschafter",
+          duration: "Sep 2018 - März 2019",
+          desc: [
+            "Förderung und Vertretung der IQ Challenge in Jendouba, um eine breite Teilnahme lokaler Gymnasiasten sicherzustellen",
+            "Unterstützung der Teilnehmer durch Anleitung und Motivation während der Wettbewerbsphasen.",
+          ],
+        },
+        {
+          id: 4,
+          title: "IoT-Entwickler-Mentor",
+          duration: "Juli 2018 - Aug 2018",
+          desc: [
+            "Mentorierte Teilnehmer beim 'IoT 4 YouthTech Camp 2018', einem Programm der US-Botschaft und MentorNations.",
+            "Gab Anleitung zum Erstellen von Android-Apps und zur Integration von IoT-Lösungen.",
+            "Half Teilnehmern bei der erfolgreichen Implementierung von Projekten mit Arduino Uno.",
+          ],
+        },
       ],
     },
     es: {
       projects: [
-        { id: 1, title: "Bringzz – Plataforma de mercado de farmacias", des: "Contribuido a una plataforma de mercado de farmacias alemana donde las farmacias listan productos y los clientes pueden buscar y pedir medicamentos. El sistema admite tres roles: cliente, farmacéutico y comprador. Incluye manejo de productos basado en recetas utilizando escaneo OCR para validar recetas médicas antes de la compra." },
-        { id: 2, title: "Janane Car – Plataforma de alquiler de coches", des: "Contribuido al desarrollo de una plataforma de alquiler de coches lista para producción que sirve a turistas y clientes locales en Túnez. La plataforma permite a los usuarios explorar vehículos, hacer reservas y gestionar reservas en línea." },
-        { id: 3, title: "HMH – E-commerce de muebles para el hogar", des: "Contribuido al desarrollo de una plataforma de comercio electrónico de muebles para el hogar construida completamente con WordPress, permitiendo a los clientes explorar y comprar productos de muebles en línea." },
-        { id: 4, title: "LynxReaders", des: "LynxReaders es una plataforma que ayuda a las personas a vender y comprar libros usados a un mejor precio" },
-        { id: 5, title: "Aplicación de Estacionamiento", des: "Una aplicación móvil para ver todos los espacios de estacionamiento disponibles, hacer reservas y pagar. Desarrollada como mi proyecto de fin de carrera en la Universidad TEK-UP a través de la asignatura Ionic." },
-        { id: 6, title: "Puerta inteligente", des: "Construí una aplicación IOT titulada 'puerta inteligente'. Posiblemente la parte más importante de un hogar conectado que te permite desbloquear y bloquear fácilmente tu puerta." },
-        { id: 7, title: "Sistema inteligente para personas mayores", des: "Construí una aplicación IOT que asegura que las personas mayores tomen sus medicamentos en las dosis correctas en el momento adecuado sin demora. Desarrollado a través del capítulo IEEE RAS INSAT." },
-        { id: 8, title: "Global game jam", des: "Entrenamiento para global game jam 2021" },
-        { id: 9, title: "Programa Soliya connect", des: "cómo estará preparado el mundo si otra pandemia llegara a existir" },
+        {
+          id: 1,
+          title: "Bringzz – Plataforma de mercado de farmacias",
+          des: "Contribuido a una plataforma de mercado de farmacias alemana donde las farmacias listan productos y los clientes pueden buscar y pedir medicamentos. El sistema admite tres roles: cliente, farmacéutico y comprador. Incluye manejo de productos basado en recetas utilizando escaneo OCR para validar recetas médicas antes de la compra.",
+        },
+        {
+          id: 2,
+          title: "Janane Car – Plataforma de alquiler de coches",
+          des: "Contribuido al desarrollo de una plataforma de alquiler de coches lista para producción que sirve a turistas y clientes locales en Túnez. La plataforma permite a los usuarios explorar vehículos, hacer reservas y gestionar reservas en línea.",
+        },
+        {
+          id: 3,
+          title: "HMH – E-commerce de muebles para el hogar",
+          des: "Contribuido al desarrollo de una plataforma de comercio electrónico de muebles para el hogar construida completamente con WordPress, permitiendo a los clientes explorar y comprar productos de muebles en línea.",
+        },
+        {
+          id: 4,
+          title: "LynxReaders",
+          des: "LynxReaders es una plataforma que ayuda a las personas a vender y comprar libros usados a un mejor precio",
+        },
+        {
+          id: 5,
+          title: "Aplicación de Estacionamiento",
+          des: "Una aplicación móvil para ver todos los espacios de estacionamiento disponibles, hacer reservas y pagar. Desarrollada como mi proyecto de fin de carrera en la Universidad TEK-UP a través de la asignatura Ionic.",
+        },
+        {
+          id: 6,
+          title: "Puerta inteligente",
+          des: "Construí una aplicación IOT titulada 'puerta inteligente'. Posiblemente la parte más importante de un hogar conectado que te permite desbloquear y bloquear fácilmente tu puerta.",
+        },
+        {
+          id: 7,
+          title: "Sistema inteligente para personas mayores",
+          des: "Construí una aplicación IOT que asegura que las personas mayores tomen sus medicamentos en las dosis correctas en el momento adecuado sin demora. Desarrollado a través del capítulo IEEE RAS INSAT.",
+        },
+        {
+          id: 8,
+          title: "Global game jam",
+          des: "Entrenamiento para global game jam 2021",
+        },
+        {
+          id: 9,
+          title: "Programa Soliya connect",
+          des: "cómo estará preparado el mundo si otra pandemia llegara a existir",
+        },
       ],
       workExperience: [
-        { id: 1, title: "Ingeniero de Software en Eskills-agency", duration: "Jul 2024 - Presente", desc: ["Construí una plataforma de entrega a gran escala, diseñando interfaces responsivas y optimizando flujos de usuario para una experiencia multiplataforma perfecta", "Contribuido a un mercado farmacéutico alemán que apoya a clientes, farmacéuticos y compradores, incluyendo validación de recetas basada en OCR", "Desarrollé una plataforma de comercio electrónico de muebles para el hogar, permitiendo la navegación de productos en línea y compras seguras", "Actualmente desarrollando una aplicación web de alquiler de coches con flujos de reserva, gestión de vehículos y paneles administrativos"] },
-        { id: 2, title: "Desarrollador Backend en Flouci by Kaoun", duration: "Sep 2023 - Jun 2024", desc: ["Lideré el desarrollo de un sistema backend para una superapp financiera, mejorando la funcionalidad para más de 250,000 usuarios y facilitando transferencias de dinero seguras y pagos sin efectivo.", "Mejoré el rendimiento y la escalabilidad del sistema implementando una API REST de Django robusta, asegurando una integración de servicio confiable y operaciones fluidas.", "Trabajé estrechamente con el equipo de front-end para ofrecer una experiencia de usuario cohesiva y perfecta"] },
-        { id: 3, title: "Pasantía de Desarrollador Full Stack en FSB FabLab", duration: "Ene 2023 - Jun 2023", desc: ["Creé el sitio web de FabLab FSB, mejorando la presencia digital y el compromiso del usuario.", "Conecté tecnologías IoT a impresoras 3D en la plataforma, permitiendo monitoreo en tiempo real y optimizando operaciones.", "Apoyé la misión de FabLab FSB de mejorar la empleabilidad y el emprendimiento para aproximadamente 3,400 estudiantes a través de herramientas de fabricación digital"] },
-        { id: 4, title: "Desarrollador Frontend (Tiempo parcial) en Eskills-agency", duration: "Mayo 2021 - Ene 2023", desc: ["Creé aplicaciones web receptivas, mejorando significativamente la experiencia del usuario en varios dispositivos.", "Desarrollé aplicaciones móviles multiplataforma, asegurando constantemente un rendimiento fluido para más de 100 clientes"] },
+        {
+          id: 1,
+          title: "Ingeniero de Software en Eskills-agency",
+          duration: "Jul 2024 - Presente",
+          desc: [
+            "Contribuido a un mercado farmacéutico alemán que apoya a clientes, farmacéuticos y compradores, incluyendo validación de recetas basada en OCR",
+            "Desarrollé una plataforma de comercio electrónico de muebles para el hogar, permitiendo la navegación de productos en línea y compras seguras",
+            "Actualmente desarrollando una aplicación web de alquiler de coches con flujos de reserva, gestión de vehículos y paneles administrativos",
+          ],
+        },
+        {
+          id: 2,
+          title: "Desarrollador Backend en Flouci by Kaoun",
+          duration: "Sep 2023 - Jun 2024",
+          desc: [
+            "Lideré el desarrollo de un sistema backend para una superapp financiera, mejorando la funcionalidad para más de 250,000 usuarios y facilitando transferencias de dinero seguras y pagos sin efectivo.",
+            "Mejoré el rendimiento y la escalabilidad del sistema implementando una API REST de Django robusta, asegurando una integración de servicio confiable y operaciones fluidas.",
+            "Trabajé estrechamente con el equipo de front-end para ofrecer una experiencia de usuario cohesiva y perfecta",
+          ],
+        },
+        {
+          id: 3,
+          title: "Pasantía de Desarrollador Full Stack en FSB FabLab",
+          duration: "Ene 2023 - Jun 2023",
+          desc: [
+            "Creé el sitio web de FabLab FSB, mejorando la presencia digital y el compromiso del usuario.",
+            "Conecté tecnologías IoT a impresoras 3D en la plataforma, permitiendo monitoreo en tiempo real y optimizando operaciones.",
+            "Apoyé la misión de FabLab FSB de mejorar la empleabilidad y el emprendimiento para aproximadamente 3,400 estudiantes a través de herramientas de fabricación digital",
+          ],
+        },
+        {
+          id: 4,
+          title: "Desarrollador Frontend (Tiempo parcial) en Eskills-agency",
+          duration: "Mayo 2021 - Ene 2023",
+          desc: [
+            "Creé aplicaciones web receptivas, mejorando significativamente la experiencia del usuario en varios dispositivos.",
+            "Desarrollé aplicaciones móviles multiplataforma, asegurando constantemente un rendimiento fluido para más de 100 clientes",
+          ],
+        },
       ],
       volunteeringExperience: [
-        { id: 1, title: "Fundador del Club LynxCoder", duration: "Sep 2022 - Presente", desc: ["Fundé LynxCoder, creando una plataforma educativa innovadora que impulsó el compromiso estudiantil a través de experiencias de aprendizaje interactivas.", "Lanzado como club universitario, fomentando una fuerte comunidad tecnológica.", "Logré reconocimiento en el top 10 del Carthage Innov'Startup Challenge."] },
-        { id: 2, title: "Mentor de Desarrollador Frontend", duration: "Mayo 2024 - Ago 2024", desc: ["Mentoré a participantes, mejorando su enfoque para construir aplicaciones web escalables.", "Asistí en la optimización de flujos de trabajo de integración y despliegue.", "Evalué proyectos como miembro del jurado, ofreciendo información clave sobre ejecución técnica y resolución de problemas."] },
-        { id: 3, title: "Embajador del desafío IQ", duration: "Sep 2018 - Mar 2019", desc: ["Promoción y representación del IQ Challenge en Jendouba, asegurando una participación generalizada entre los estudiantes de secundaria locales", "Apoyo a los participantes proporcionando orientación y motivación durante las etapas de la competencia."] },
-        { id: 4, title: "Mentor de Desarrollador IoT", duration: "Jul 2018 - Ago 2018", desc: ["Mentoré a participantes en el 'IoT 4 YouthTech Camp 2018', un programa de la Embajada de EE. UU. y MentorNations.", "Proporcioné orientación sobre la construcción de aplicaciones Android y la integración de soluciones IoT.", "Ayudé a los participantes a implementar con éxito proyectos usando Arduino Uno."] },
+        {
+          id: 1,
+          title: "Fundador del Club LynxCoder",
+          duration: "Sep 2022 - Presente",
+          desc: [
+            "Fundé LynxCoder, creando una plataforma educativa innovadora que impulsó el compromiso estudiantil a través de experiencias de aprendizaje interactivas.",
+            "Lanzado como club universitario, fomentando una fuerte comunidad tecnológica.",
+            "Logré reconocimiento en el top 10 del Carthage Innov'Startup Challenge.",
+          ],
+        },
+        {
+          id: 2,
+          title: "Mentor de Desarrollador Frontend",
+          duration: "Mayo 2024 - Ago 2024",
+          desc: [
+            "Mentoré a participantes, mejorando su enfoque para construir aplicaciones web escalables.",
+            "Asistí en la optimización de flujos de trabajo de integración y despliegue.",
+            "Evalué proyectos como miembro del jurado, ofreciendo información clave sobre ejecución técnica y resolución de problemas.",
+          ],
+        },
+        {
+          id: 3,
+          title: "Embajador del desafío IQ",
+          duration: "Sep 2018 - Mar 2019",
+          desc: [
+            "Promoción y representación del IQ Challenge en Jendouba, asegurando una participación generalizada entre los estudiantes de secundaria locales",
+            "Apoyo a los participantes proporcionando orientación y motivación durante las etapas de la competencia.",
+          ],
+        },
+        {
+          id: 4,
+          title: "Mentor de Desarrollador IoT",
+          duration: "Jul 2018 - Ago 2018",
+          desc: [
+            "Mentoré a participantes en el 'IoT 4 YouthTech Camp 2018', un programa de la Embajada de EE. UU. y MentorNations.",
+            "Proporcioné orientación sobre la construcción de aplicaciones Android y la integración de soluciones IoT.",
+            "Ayudé a los participantes a implementar con éxito proyectos usando Arduino Uno.",
+          ],
+        },
       ],
     },
   };
