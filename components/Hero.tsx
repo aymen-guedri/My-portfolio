@@ -69,7 +69,7 @@ const Hero = () => {
           </h1>
 
           <a
-            href="https://drive.google.com/file/d/1BYSEZrjNWVucBsX8yoE8QWcs07Yg223u/view?usp=sharing"
+            href="https://drive.google.com/file/d/1LYslXN151OJkaG7nWzJygxYPlAclPp3z/view?usp=sharing"
             target="_blank"
           >
             <MagicButton
