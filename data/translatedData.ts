@@ -4,7 +4,12 @@ export const getTranslatedData = (lang: string) => {
       projects: [
         {
           id: 1,
-          title: "Bringzz – Pharmacy Marketplace Platform",
+          title: "Tal9ani, On-Demand Services Marketplace",
+          des: "On-demand services marketplace for Tunisia connecting users with local verified providers (plumbing, cleaning, beauty, handyman). Features two booking flows: SearchMatch (user posts request → providers bid) and Vitrine (provider catalog → direct booking). Built with .NET 10, Ionic 7 + React 18, MongoDB, SignalR, and Clean Architecture.",
+        },
+        {
+          id: 2,
+          title: "Bringzz, Pharmacy Marketplace Platform",
           des: "Contributed to a German pharmacy marketplace platform where pharmacies list products and customers can search and order medications. The system supports three roles: customer, pharmacist, and shopper. Includes prescription-based product handling using OCR scanning to validate medical prescriptions before purchase.",
         },
         {
@@ -135,6 +140,11 @@ export const getTranslatedData = (lang: string) => {
       projects: [
         {
           id: 1,
+          title: "Tal9ani, Marketplace de services à la demande",
+          des: "Marketplace de services à la demande pour la Tunisie, connectant les utilisateurs avec des prestataires locaux vérifiés (plomberie, nettoyage, beauté, bricolage). Deux flux de réservation : SearchMatch (l'utilisateur publie une demande → les prestataires font des offres) et Vitrine (catalogue prestataire → réservation directe). Construit avec .NET 10, Ionic 7 + React 18, MongoDB, SignalR et Clean Architecture.",
+        },
+        {
+          id: 2,
           title: "Bringzz – Plateforme de marché pharmaceutique",
           des: "Contribué à une plateforme de marché pharmaceutique allemande où les pharmacies répertorient les produits et les clients peuvent rechercher et commander des médicaments. Le système prend en charge trois rôles : client, pharmacien et acheteur. Comprend la gestion de produits basée sur ordonnance utilisant la numérisation OCR pour valider les ordonnances médicales avant l'achat.",
         },
@@ -266,6 +276,11 @@ export const getTranslatedData = (lang: string) => {
       projects: [
         {
           id: 1,
+          title: "Tal9ani – On-Demand-Dienstleistungsmarktplatz",
+          des: "On-Demand-Dienstleistungsmarktplatz für Tunesien, der Nutzer mit lokalen verifizierten Anbietern verbindet (Klempner, Reinigung, Schönheit, Handwerker). Zwei Buchungsabläufe: SearchMatch (Nutzer stellt Anfrage → Anbieter bieten) und Vitrine (Anbieterkatalog → Direktbuchung). Gebaut mit .NET 10, Ionic 7 + React 18, MongoDB, SignalR und Clean Architecture.",
+        },
+        {
+          id: 2,
           title: "Bringzz – Apotheken-Marktplatz-Plattform",
           des: "Beigetragen zu einer deutschen Apotheken-Marktplatz-Plattform, auf der Apotheken Produkte auflisten und Kunden Medikamente suchen und bestellen können. Das System unterstützt drei Rollen: Kunde, Apotheker und Käufer. Beinhaltet rezeptbasierte Produktbehandlung mit OCR-Scanning zur Validierung medizinischer Rezepte vor dem Kauf.",
         },
@@ -397,6 +412,11 @@ export const getTranslatedData = (lang: string) => {
       projects: [
         {
           id: 1,
+          title: "Tal9ani – Mercado de servicios bajo demanda",
+          des: "Mercado de servicios bajo demanda para Túnez que conecta usuarios con proveedores locales verificados (fontanería, limpieza, belleza, manitas). Dos flujos de reserva: SearchMatch (el usuario publica solicitud → los proveedores pujan) y Vitrine (catálogo del proveedor → reserva directa). Construido con .NET 10, Ionic 7 + React 18, MongoDB, SignalR y Clean Architecture.",
+        },
+        {
+          id: 2,
           title: "Bringzz – Plataforma de mercado de farmacias",
           des: "Contribuido a una plataforma de mercado de farmacias alemana donde las farmacias listan productos y los clientes pueden buscar y pedir medicamentos. El sistema admite tres roles: cliente, farmacéutico y comprador. Incluye manejo de productos basado en recetas utilizando escaneo OCR para validar recetas médicas antes de la compra.",
         },

@@ -74,6 +74,15 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "Tal9ani, On-Demand Services Marketplace",
+    des: "On-demand services marketplace for Tunisia connecting users with local verified providers (plumbing, cleaning, beauty, handyman). Features two booking flows: SearchMatch (user posts request → providers bid) and Vitrine (provider catalog → direct booking). Built with .NET 10, ASP.NET Core, Ionic 7 + React 18, MongoDB, SignalR, and Clean Architecture.",
+    img: "/tal9ani.png",
+    iconLists: ["/ionic.svg", "/re.svg", "/ts.svg", "/mongo.png"],
+    link: "https://tal9ani.aymenguedri.online/",
+    isProduction: true,
+  },
+  {
+    id: 2,
     title: "Bringzz – Pharmacy Marketplace Platform",
     des: "Contributed to a German pharmacy marketplace platform where pharmacies list products and customers can search and order medications. The system supports three roles: customer, pharmacist, and shopper. Includes prescription-based product handling using OCR scanning to validate medical prescriptions before purchase.",
     img: "/bringzz.png",
@@ -82,7 +91,7 @@ export const projects = [
     company: "eSkills Agency",
   },
   {
-    id: 2,
+    id: 3,
     title: "Janane Car – Car Rental Platform",
     des: "Contributed to the development of a production-ready car rental platform serving tourists and local customers in Tunisia. The platform allows users to browse vehicles, make reservations, and manage bookings online.",
     img: "/janane.png",
@@ -92,7 +101,7 @@ export const projects = [
     isProduction: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "HMH – Home Furniture E-commerce",
     des: "Contributed to the development of a home furniture e-commerce platform built entirely using WordPress, enabling customers to browse and purchase furniture products online.",
     img: "/hmh.png",
@@ -102,7 +111,7 @@ export const projects = [
     isProduction: true,
   },
   {
-    id: 4,
+    id: 5,
     title: "LynxReaders",
     des: " LynxReaders is a platform that helps people to sell and buy used books for a better price",
     img: "/lynxreaders.png",
@@ -118,7 +127,7 @@ export const projects = [
     isProduction: true,
   },
   {
-    id: 5,
+    id: 6,
     title: "Parking App",
     des: "A mobile application to see all available parking spots, make reservations, and pay for them. Developed as my final year project at TEK-UP University through the Ionic subject.",
     img: "/ionic.png",
@@ -126,7 +135,7 @@ export const projects = [
     link: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "Smart door",
     des: "I built an IOT APP entitled ”smart door ” . arguably the most important part of a connected home that allows you to easily unlock and lock your door.",
     img: "/dor.jpg",
@@ -134,7 +143,7 @@ export const projects = [
     link: "https://youtu.be/9dhrrhRhbis?si=ouTxf0Yj7z5l5mG_",
   },
   {
-    id: 6,
+    id: 8,
     title: "Smart System for the elderly",
     des: "I built an IOT app that Assures that elderly people take their medicines in the right doses at the right time without delay. Developed through IEEE RAS Chapter INSAT.",
     img: "/system.jpg",
@@ -142,7 +151,7 @@ export const projects = [
     link: "",
   },
   {
-    id: 7,
+    id: 9,
     title: "Global game jam",
     des: "Trainning for global game jam 2021",
     img: "/game.png",
@@ -150,7 +159,7 @@ export const projects = [
     link: "https://youtu.be/AAruVtFAzpw?si=_iXt-9kxext7tMKr",
   },
   {
-    id: 8,
+    id: 10,
     title: "Soliya connect program",
     des: "how will the world be prepared if another pandemic came into existence",
     img: "/soliya2.png",
@@ -234,9 +243,21 @@ export const workExperience = [
       "Built a full-scale delivery platform, designing responsive interfaces and optimizing user flows for a seamless cross-platform experience",
       "Contributed to a German pharmacy marketplace supporting customers, pharmacists, and shoppers, including OCR-based prescription validation",
       "Developed an e-commerce platform for home furniture, enabling online product browsing and secure purchasing",
-      "Currently developing a car rental web application featuring booking workflows, vehicle management, and administrative dashboards"
+      "Currently developing a car rental web application featuring booking workflows, vehicle management, and administrative dashboards",
     ],
-    skills: ["reactjs", "nodejs", "mongodb", "expressjs", "nextjs", "php", "wordpress", "restapi", "playwright", "github", "agile"],
+    skills: [
+      "reactjs",
+      "nodejs",
+      "mongodb",
+      "expressjs",
+      "nextjs",
+      "php",
+      "wordpress",
+      "restapi",
+      "playwright",
+      "github",
+      "agile",
+    ],
     className: "md:col-span-2",
     thumbnail: "/eskills-a.png",
   },
