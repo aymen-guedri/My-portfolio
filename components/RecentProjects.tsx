@@ -106,7 +106,7 @@ const RecentProjects = () => {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className={`absolute inset-0 w-full h-full ${item.img === '/bringzz.png' || item.img === '/ionic.png' ? 'object-contain' : 'object-cover'}`}
+                  className={`absolute inset-0 w-full h-full ${item.img === '/bringzz.png' || item.img === '/ionic.png' || item.img === '/tal9ani.png' ? 'object-contain' : 'object-cover'}`}
                 />
               </div>
 

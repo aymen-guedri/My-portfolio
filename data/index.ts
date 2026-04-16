@@ -77,7 +77,7 @@ export const projects = [
     title: "Tal9ani, On-Demand Services Marketplace",
     des: "On-demand services marketplace for Tunisia connecting users with local verified providers (plumbing, cleaning, beauty, handyman). Features two booking flows: SearchMatch (user posts request → providers bid) and Vitrine (provider catalog → direct booking). Built with .NET 10, ASP.NET Core, Ionic 7 + React 18, MongoDB, SignalR, and Clean Architecture.",
     img: "/tal9ani.png",
-    iconLists: ["/ionic.svg", "/re.svg", "/ts.svg", "/mongo.png"],
+    iconLists: ["/ionic.svg", "/re.svg", "/mongo.png"],
     link: "https://tal9ani.aymenguedri.online/",
     isProduction: true,
   },
